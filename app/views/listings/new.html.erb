@@ -1,0 +1,6 @@
+<%= form_for @listing do |f| %>
+	<%= f.text_field :name %>
+	<%= f.text_field :description %>
+	<%= f.hidden_field :account_id, :value => session[:account_id] %>
+	<%= f.submit %>
+<% end %>
