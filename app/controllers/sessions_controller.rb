@@ -1,13 +1,13 @@
 class SessionsController < ApplicationController
   def new
-    @user = User.new
+    @account = Account.new
     redirect_to '/' unless logged_out?
   end
 
   def create
     @account = Account.find_by(account_params(:username))
     return head(:forbidden) unless @account.authenticate(account_params(:password))
-    session[:user_id] = @user.id
+    session[:user_id] = @account.id
   end
 
   def destroy
