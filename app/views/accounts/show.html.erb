@@ -1,1 +1,3 @@
 <h1>Hello <%= @account.username %>!</h1>
+
+<%= link_to "Create a new listing!", new_account_listing_path(@account.id) %>
