@@ -3243,3 +3243,800 @@ Completed 200 OK in 119ms (Views: 95.5ms | ActiveRecord: 4.6ms)
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
   [1m[35m (165.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bizaar_development"[0m
   [1m[35m (158.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bizaar_test"[0m
+Started GET "/listings" for ::1 at 2017-03-12 14:31:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (84.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#index as HTML
+  [1m[36mAccount Load (31.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 196ms (ActiveRecord: 165.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  
+app/controllers/listings_controller.rb:47:in `find_account'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.3ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.5ms)
+Started GET "/accounts/new" for ::1 at 2017-03-12 14:32:05 -0400
+Processing by AccountsController#new as HTML
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/new.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 367ms (Views: 348.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2017-03-12 14:32:25 -0400
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uMGncA/kmYVpbtPFsS8YjLm1fkr4s2yqh+h+kuapU1iaPpQDrJlsca0MJqUoyQGqlMTSDhmdicwu5UHnXQel9Q==", "account"=>{"username"=>"user1", "email"=>"user1@user.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (19.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (64.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "user1@user.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "user1"], ["LIMIT", 1]]
+  [1m[35mSQL (73.7ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user1"], ["password_digest", "$2a$10$.eGm62f6IGw9zxcWbBB74O4nlU78.Oi3IEcSk8kVQZ54pELrj9rfO"], ["email", "user1@user.com"], ["created_at", 2017-03-12 18:32:25 UTC], ["updated_at", 2017-03-12 18:32:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/2
+Completed 302 Found in 267ms (ActiveRecord: 158.4ms)
+
+
+Started GET "/accounts/2" for ::1 at 2017-03-12 14:32:25 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts/2/listings/new" for ::1 at 2017-03-12 14:32:27 -0400
+Processing by ListingsController#new as HTML
+  Parameters: {"account_id"=>"2"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 133ms (Views: 73.7ms | ActiveRecord: 46.6ms)
+
+
+Started POST "/accounts/2/listings" for ::1 at 2017-03-12 14:32:52 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QsYLHBkHJ2yWD4IiLDQkOTWFfBYN7BZOzCe9AhCw7NNgOThvunrSmFJtd0K10j0fGPTQUuzC8yhlKoJ3qx4afg==", "listing"=>{"name"=>"plates", "description"=>"clean plates", "account_id"=>"2"}, "commit"=>"Create Listing", "account_id"=>"2"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.7ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "plates"], ["description", "clean plates"], ["account_id", 2], ["created_at", 2017-03-12 18:32:52 UTC], ["updated_at", 2017-03-12 18:32:52 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/2/listings/2
+Completed 302 Found in 98ms (ActiveRecord: 54.4ms)
+
+
+Started GET "/accounts/2/listings/2" for ::1 at 2017-03-12 14:32:52 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"2", "id"=>"2"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 41ms (Views: 24.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/accounts/2/listings/new" for ::1 at 2017-03-12 14:34:55 -0400
+Processing by ListingsController#new as HTML
+  Parameters: {"account_id"=>"2"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/accounts/2/listings" for ::1 at 2017-03-12 14:35:35 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YBKndZ6M5IA+Kd8RKqVJGJSU5Ji4efRYHTNGWXQj0VpC7ZQGPfERdPpLKnGzQ1A+ueVI3FlXET60Pnksz40n9w==", "listing"=>{"name"=>"pencil", "description"=>"sharp pencil\r\n", "account_id"=>"2"}, "commit"=>"Create Listing", "account_id"=>"2"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "pencil"], ["description", "sharp pencil\r\n"], ["account_id", 2], ["created_at", 2017-03-12 18:35:35 UTC], ["updated_at", 2017-03-12 18:35:35 UTC]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/2/listings/3
+Completed 302 Found in 48ms (ActiveRecord: 41.7ms)
+
+
+Started GET "/accounts/2/listings/3" for ::1 at 2017-03-12 14:35:35 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"2", "id"=>"3"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 42ms (Views: 36.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/new" for ::1 at 2017-03-12 14:35:49 -0400
+Processing by AccountsController#new as HTML
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 34ms (Views: 31.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2017-03-12 14:36:18 -0400
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lJagPin8jfYx6CD0TQJ9wL4KD5O8RIwrfSdd/4mmjeK2aZNNioF4AvWK1ZTU5GTmk3uj111qaU3UKmKKMgh7Tw==", "account"=>{"username"=>"user2", "email"=>"user2@user.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "user2@user.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "user2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "user2"], ["password_digest", "$2a$10$b1AlRMs2pqtHGhWD3zgznO/dHWAwXCUwkMQN0QXFRtCi/2Edz.K0."], ["email", "user2@user.com"], ["created_at", 2017-03-12 18:36:18 UTC], ["updated_at", 2017-03-12 18:36:18 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/3
+Completed 302 Found in 76ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 14:36:18 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/accounts/3/listings/new" for ::1 at 2017-03-12 14:36:20 -0400
+Processing by ListingsController#new as HTML
+  Parameters: {"account_id"=>"3"}
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/accounts/3/listings" for ::1 at 2017-03-12 14:36:31 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r1Di5KiqvYY2BBlxBza67eTNmBxoMR2+ch9NT7ic40eNr9GXC9dIcvJm7BGe0KPLybw0WIkf+NjbEnI6AzIV6g==", "listing"=>{"name"=>"towel", "description"=>"beach towel", "account_id"=>"3"}, "commit"=>"Create Listing", "account_id"=>"3"}
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "towel"], ["description", "beach towel"], ["account_id", 3], ["created_at", 2017-03-12 18:36:31 UTC], ["updated_at", 2017-03-12 18:36:31 UTC]]
+  [1m[35m (42.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/3/listings/4
+Completed 302 Found in 51ms (ActiveRecord: 43.8ms)
+
+
+Started GET "/accounts/3/listings/4" for ::1 at 2017-03-12 14:36:31 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"3", "id"=>"4"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 30.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/listings" for ::1 at 2017-03-12 14:36:38 -0400
+Processing by ListingsController#index as HTML
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  
+app/controllers/listings_controller.rb:47:in `find_account'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.4ms)
+Started GET "/listings" for ::1 at 2017-03-12 14:38:58 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered listings/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial listings/_search_bar, application/_search_bar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/Nany/Development/code/bizaar/app/views"
+):
+    1: 
+    2: <%render "search_bar"%>
+    3: 
+    4: 
+    5: <%@listings.each do |listing|%>
+  
+app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270355424800'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.6ms)
+Started GET "/listings" for ::1 at 2017-03-12 14:39:25 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.0ms)
+  Rendered listings/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270356808640'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.8ms)
+Started GET "/listings" for ::1 at 2017-03-12 14:40:00 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  Rendered listings/index.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270371467020'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.2ms)
+Started GET "/listings" for ::1 at 2017-03-12 14:40:49 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  Rendered listings/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270357709200'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (73.2ms)
+Started GET "/listings" for ::1 at 2017-03-12 14:41:01 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.7ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 37ms (Views: 30.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/listings" for ::1 at 2017-03-12 14:41:26 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.9ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/listings" for ::1 at 2017-03-12 14:42:58 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/listings" for ::1 at 2017-03-12 14:43:19 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.6ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/listings" for ::1 at 2017-03-12 14:44:38 -0400
+Processing by ListingsController#index as HTML
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 14:44:43 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (2.1ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered listings/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 31ms (Views: 28.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 15:18:22 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.0ms)
+  Rendered listings/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:4: syntax error, unexpected ':', expecting ')'
+....append=( submit_tag "search" :name=> nil);@output_buffer.sa...
+...                               ^):
+  
+app/views/layouts/_search_bar.html.erb:4: syntax error, unexpected ':', expecting ')'
+app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270357400220'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.2ms)
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 15:18:40 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.6ms)
+  [1m[35m (61.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name, description LIKE '%plates%')[0m
+  Rendered listings/index.html.erb within layouts/application (70.5ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 63.2ms)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type record
+LINE 1: SELECT COUNT(*) FROM "listings" WHERE (name, description LIK...
+                                              ^
+: SELECT COUNT(*) FROM "listings" WHERE (name, description LIKE '%plates%')):
+    1: 
+    2: <%=render "/layouts/search_bar"%>
+    3: 
+    4: <%if @listings.empty? %>
+    5: <div class="no_results_found">
+    6:   Sorry, we couldn't find any results for your search
+    7: </div>
+  
+app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270310952160'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.3ms)
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 15:19:34 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" IN (0, 0)[0m
+Completed 404 Not Found in 10ms (ActiveRecord: 4.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Listings with 'id': (name, description LIKE ?, %plates%) (found 0 results, but was looking for 2)):
+  
+app/models/listing.rb:8:in `search'
+app/controllers/listings_controller.rb:28:in `index'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.7ms)
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 15:19:49 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."id" IN (0, 0)[0m
+Completed 404 Not Found in 9ms (ActiveRecord: 4.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find all Listings with 'id': (name, description LIKE ?, %plates%) (found 0 results, but was looking for 2)):
+  
+app/models/listing.rb:8:in `search'
+app/controllers/listings_controller.rb:28:in `index'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.3ms)
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 15:22:28 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.7ms)
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name, description like '%plates%')[0m
+  Rendered listings/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type record
+LINE 1: SELECT COUNT(*) FROM "listings" WHERE (name, description lik...
+                                              ^
+: SELECT COUNT(*) FROM "listings" WHERE (name, description like '%plates%')):
+    1: 
+    2: <%=render "/layouts/search_bar"%>
+    3: 
+    4: <%if @listings.empty? %>
+    5: <div class="no_results_found">
+    6:   Sorry, we couldn't find any results for your search
+    7: </div>
+  
+app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270307736220'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.4ms)
+Started GET "/listings?utf8=%E2%9C%93&search=plates&commit=search" for ::1 at 2017-03-12 15:22:44 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plates", "commit"=>"search"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.6ms)
+  [1m[35m (37.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%plates%')[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%plates%')[0m
+  Rendered listings/index.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 118ms (Views: 71.5ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=plate" for ::1 at 2017-03-12 15:22:50 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plate"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.5ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%plate%')[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%plate%')[0m
+  Rendered listings/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=pla" for ::1 at 2017-03-12 15:22:52 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pla"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%pla%')[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%pla%')[0m
+  Rendered listings/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=pla" for ::1 at 2017-03-12 15:25:48 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pla"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 2) in: name like ?, or description like ?):
+  
+app/models/listing.rb:8:in `search'
+app/controllers/listings_controller.rb:28:in `index'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.6ms)
+Started GET "/listings?utf8=%E2%9C%93&search=pla" for ::1 at 2017-03-12 15:26:10 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pla"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 2) in: name like ?, or description like ?):
+  
+app/models/listing.rb:8:in `search'
+app/controllers/listings_controller.rb:28:in `index'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.0ms)
+Started GET "/listings?utf8=%E2%9C%93&search=pla" for ::1 at 2017-03-12 15:27:51 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pla"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.0ms)
+  [1m[35m (41.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%pla%', or description like '%pla%')[0m
+  Rendered listings/index.html.erb within layouts/application (50.6ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 43.2ms)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "or"
+LINE 1: ...OUNT(*) FROM "listings" WHERE (name like '%pla%', or descrip...
+                                                             ^
+: SELECT COUNT(*) FROM "listings" WHERE (name like '%pla%', or description like '%pla%')):
+    1: 
+    2: <%=render "/layouts/search_bar"%>
+    3: 
+    4: <%if @listings.empty? %>
+    5: <div class="no_results_found">
+    6:   Sorry, we couldn't find any results for your search
+    7: </div>
+  
+app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270372086120'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.8ms)
+Started GET "/listings?utf8=%E2%9C%93&search=pla" for ::1 at 2017-03-12 15:28:31 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pla"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.0ms)
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%pla%', or description like '%pla%')[0m
+  Rendered listings/index.html.erb within layouts/application (6.8ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "or"
+LINE 1: ...ings".* FROM "listings" WHERE (name like '%pla%', or descrip...
+                                                             ^
+: SELECT "listings".* FROM "listings" WHERE (name like '%pla%', or description like '%pla%')):
+     6:   Sorry, we couldn't find any results for your search
+     7: </div>
+     8: <%else%>
+     9: <%@listings.each do |listing|%>
+    10:   <div class="listing">
+    11:     <%=listing.name%>
+    12:   </div>
+  
+app/views/listings/index.html.erb:9:in `_app_views_listings_index_html_erb__2380085980187394543_70270358428060'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.3ms)
+Started GET "/listings?utf8=%E2%9C%93&search=plat" for ::1 at 2017-03-12 15:29:13 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"plat"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.6ms)
+  [1m[36mListing Load (11.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%plat%', or description like '%plat%')[0m
+  [1m[36mListing Load (2.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%plat%', or description like '%plat%')[0m
+  [1m[36mListing Load (1.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%plat%', or description like '%plat%')[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%plat%', or description like '%plat%')[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%plat%', or description like '%plat%')[0m
+  Rendered listings/index.html.erb within layouts/application (147227.0ms)
+Completed 500 Internal Server Error in 147233ms (ActiveRecord: 22.8ms)
+
+
+  
+ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "or"
+LINE 1: ...UNT(*) FROM "listings" WHERE (name like '%plat%', or descrip...
+                                                             ^
+: SELECT COUNT(*) FROM "listings" WHERE (name like '%plat%', or description like '%plat%')):
+    1: 
+    2: <%=render "/layouts/search_bar"%>
+    3: <%byebug%>
+    4: <%if @listings.empty? %>
+    5: <div class="no_results_found">
+    6:   Sorry, we couldn't find any results for your search
+    7: </div>
+  
+app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270371976820'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (71.4ms)
+Started GET "/listings?utf8=%E2%9C%93&search=clean" for ::1 at 2017-03-12 15:31:47 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"clean"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.6ms)
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description like '%clean%')[0m
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (description like '%clean%')[0m
+  Rendered listings/index.html.erb within layouts/application (84491.6ms)
+Completed 200 OK in 84552ms (Views: 84534.7ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=clean" for ::1 at 2017-03-12 15:33:18 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"clean"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.6ms)
+Started GET "/listings?utf8=%E2%9C%93&search=clean" for ::1 at 2017-03-12 15:33:39 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%clean%')[0m
+  Rendered listings/index.html.erb within layouts/application (21215.4ms)
+Completed 200 OK in 21244ms (Views: 21235.2ms | ActiveRecord: 3.8ms)
+
+
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"clean"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.7ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%clean%')[0m
+  Rendered listings/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 34ms (Views: 26.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=clean" for ::1 at 2017-03-12 15:33:43 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"clean"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.2ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%clean%')[0m
+  Rendered listings/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=pla" for ::1 at 2017-03-12 15:33:48 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"pla"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.2ms)
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (name like '%pla%')[0m
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (name like '%pla%')[0m
+  Rendered listings/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 41ms (Views: 34.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=sharp" for ::1 at 2017-03-12 15:34:08 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"sharp"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description like '%sharp%')[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (description like '%sharp%')[0m
+  Rendered listings/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 43ms (Views: 31.1ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=cl" for ::1 at 2017-03-12 15:34:13 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"cl"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description like '%cl%')[0m
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (description like '%cl%')[0m
+  Rendered listings/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 32ms (Views: 27.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=clean" for ::1 at 2017-03-12 15:34:16 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"clean"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.3ms)
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description like '%clean%')[0m
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (description like '%clean%')[0m
+  Rendered listings/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=" for ::1 at 2017-03-12 15:34:33 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>""}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (1.1ms)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description like '%%')[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (description like '%%')[0m
+  Rendered listings/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/listings?utf8=%E2%9C%93&search=towel" for ::1 at 2017-03-12 15:37:11 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"towel"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (3 for 1) in: description like ?):
+  
+app/models/listing.rb:8:in `search'
+app/controllers/listings_controller.rb:28:in `index'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.7ms)
+Started GET "/listings?utf8=%E2%9C%93&search=towel" for ::1 at 2017-03-12 15:38:09 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"towel"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.7ms)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description or name like '%towel%')[0m
+  Rendered listings/index.html.erb within layouts/application (7.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of OR must be type boolean, not type character varying
+LINE 1: SELECT COUNT(*) FROM "listings" WHERE (description or name l...
+                                               ^
+: SELECT COUNT(*) FROM "listings" WHERE (description or name like '%towel%')):
+    1: 
+    2: <%=render "/layouts/search_bar"%>
+    3: 
+    4: <%if @listings.empty? %>
+    5: <div class="no_results_found">
+    6:   Sorry, we couldn't find any results for your search
+    7: </div>
+  
+app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270358852620'
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.8ms)
+Started GET "/listings?utf8=%E2%9C%93&search=clean" for ::1 at 2017-03-12 15:40:38 -0400
+Processing by ListingsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"clean"}
+  Rendering listings/index.html.erb within layouts/application
+  Rendered layouts/_search_bar.html.erb (0.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "listings" WHERE (description like '%clean%')[0m
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE (description like '%clean%')[0m
+  Rendered listings/index.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 40ms (Views: 29.9ms | ActiveRecord: 4.7ms)
+
+

@@ -1,0 +1,14 @@
+
+<%=render "/layouts/search_bar"%>
+
+<%if @listings.empty? %>
+<div class="no_results_found">
+  Sorry, we couldn't find any results for your search
+</div>
+<%else%>
+<%@listings.each do |listing|%>
+  <div class="listing">
+    <%=listing.name%>
+  </div>
+<%end%>
+<%end%>

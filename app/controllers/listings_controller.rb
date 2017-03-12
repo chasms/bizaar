@@ -1,6 +1,8 @@
 class ListingsController < ApplicationController
 	before_action :find_listing, only: [:show, :edit, :update, :destroy]
+
 	before_action :find_account
+	skip_before_action :find_account, only: [:index]
 	def new
 		@listing = Listing.new
 	end
@@ -20,6 +22,11 @@ class ListingsController < ApplicationController
 		@user = Account.find(session[:account_id])
     @bid = Bid.new
 		@listing = Listing.find(params[:id])
+	end
+
+	def index
+		@listings= Listing.search(params[:search])
+
 	end
 
 	def edit

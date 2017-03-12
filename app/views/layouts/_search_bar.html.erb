@@ -1,0 +1,5 @@
+<%= form_tag listings_path, method: 'get'%>
+  <div>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "search", :name=> nil%>
+  </div>
