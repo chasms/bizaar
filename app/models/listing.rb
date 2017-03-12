@@ -5,7 +5,7 @@ class Listing < ApplicationRecord
 
 def self.search (search)
 	if search
-		self.where('description like ?', "%#{search}%")
+		self.where('description like ? or name like ?', "%#{search}%", "%#{search}%")
 	else
 		self.all
 	end
