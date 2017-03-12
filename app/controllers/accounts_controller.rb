@@ -16,6 +16,7 @@ class AccountsController < ApplicationController
   def show
     if logged_in?
       @account = Account.find(params[:id])
+      @listings = @account.listings.all
     else
       redirect_to login_path
     end

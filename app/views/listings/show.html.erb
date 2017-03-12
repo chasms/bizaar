@@ -1,5 +1,6 @@
 <p>Name: <%= @listing.name %></p>
 <p>Description: <%= @listing.description %></p>
+<p>Seller: <%= @listing.account.username %></p>
 
 <% unless @account == @user %>
   <%= form_for @bid do |f| %>
