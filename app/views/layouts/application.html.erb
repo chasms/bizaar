@@ -10,5 +10,7 @@
 
   <body>
     <%= yield %>
+
+    <%= render :partial => 'layouts/logout' if session[:account_id] != nil %>
   </body>
 </html>

@@ -1,3 +1,4 @@
+<h1>Log In!</h1>
 <% if @account.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -25,4 +26,6 @@
   <div class="actions">
     <%= f.submit "Log In" %>
   </div>
+
+  <p>New to Bizaar? <%= link_to 'Sign Up!', new_account_path %></p>
 <% end %>

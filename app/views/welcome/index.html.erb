@@ -7,7 +7,7 @@
 <h2>All Listings</h2>
 <div class="feed">
   <% @listings.each do |l| %>
-  <h3><%= l.name %></h3>
+  <h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
   <p><%= link_to l.account.username, account_path(l.account_id) %></p>
   <p><%= l.description %></p>
   <p>-----------------</p>
@@ -15,9 +15,3 @@
 </div>
 
 <br>
-
-<div class="logout">
-<%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
-  <input type=submit value='Log Out'>
-<% end %>
-</div>
