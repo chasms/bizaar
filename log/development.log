@@ -4834,3 +4834,1007 @@ Processing by ListingsController#show as HTML
 Completed 200 OK in 34ms (Views: 27.7ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/" for ::1 at 2017-03-12 17:19:25 -0400
+Started GET "/" for ::1 at 2017-03-12 17:19:25 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccountsController#show as HTML
+Processing by AccountsController#show as HTML
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 54ms (ActiveRecord: 10.3ms)
+
+
+Completed 404 Not Found in 50ms (ActiveRecord: 14.6ms)
+
+
+  
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  
+  
+app/controllers/accounts_controller.rb:18:in `show'
+app/controllers/accounts_controller.rb:18:in `show'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.3ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (172.0ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (170.6ms)
+Started GET "/" for ::1 at 2017-03-12 17:19:28 -0400
+Processing by AccountsController#show as HTML
+  [1m[36mAccount Load (1.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  
+app/controllers/accounts_controller.rb:18:in `show'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.2ms)
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:19:34 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 511ms (Views: 471.6ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/logout?method=post" for ::1 at 2017-03-12 17:19:36 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXjtzzunJzdInemhbd5uUJr8P4/l13vVE+iUfLAypNzySOE892aKlosGOxLKxrOjApg2+rWJsfNmIskpVO0kbw==", "method"=>"post"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:19:36 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (60.8ms)
+Completed 200 OK in 92ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:19:42 -0400
+Processing by AccountsController#show as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:19:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:21:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TJp5TFQIE+b5XJGVk/k0jbwO3pdjehR15Qh+lgONopfB6VYrwcITtVh5iBjUlgKt6tmRSCC0eodK9BdSAsrGsA==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/accounts/3
+Completed 302 Found in 78ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:21:00 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:21:02 -0400
+Processing by AccountsController#show as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
+  
+app/controllers/accounts_controller.rb:18:in `show'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.0ms)
+Started GET "/login" for ::1 at 2017-03-12 17:30:31 -0400
+Started GET "/" for ::1 at 2017-03-12 17:30:41 -0400
+Started GET "/" for ::1 at 2017-03-12 17:30:41 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 153ms (Views: 117.0ms | ActiveRecord: 0.0ms)
+
+
+Processing by WelcomeController#index as HTML
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:30:42 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 57ms (Views: 33.7ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 578ms (Views: 532.3ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:31:08 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ql39bqocubhYK+IpO/YST8rrokOrP/NL/RsWetXYBlsnLtIJP9a56/kO+6R8mSRvnDztnOjxnblS53++1J9ifA==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:31:08 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:08 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:31:11 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lz21b/95Yp/Y6wMYEQOiEy+xLJqVpectq92eYKEGXKAaTpoIarNizHnOGpVWbJQzeWZjRdZrid8EIfekoEE4hw==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:31:12 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:12 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:31:14 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:31:16 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:16 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/1" for ::1 at 2017-03-12 17:31:41 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (2.6ms)
+Started GET "/accounts/1" for ::1 at 2017-03-12 17:31:41 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.9ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 227ms (Views: 209.2ms | ActiveRecord: 0.4ms)
+
+
+Completed 200 OK in 163ms (Views: 151.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:31:44 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:44 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 61ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:31:51 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/logout?method=post" for ::1 at 2017-03-12 17:31:52 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tue31c48TMuMxGxXGrzN0J9oqyvNKVFujtOsr0uBuvDDlJiyW/ZMmC3hddpd0/vwyb/k9I7nP5whL8VrSsbe1w==", "method"=>"post"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:52 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:31:54 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:31:54 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:33:29 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:33:29 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 138ms (Views: 93.0ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:33:33 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HSanRBePQ6Kh/UI3q9P99Yqo5uJPLsssJJoH7snt8OET6RXboGO2ytExjy7oi4+/pTNlNkFdwLpAAN5HKWTvyg==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:33:33 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:33:33 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:33:36 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 64ms (Views: 26.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/logout?method=post" for ::1 at 2017-03-12 17:33:38 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fXr9fZkZb2EdCvs6UknO6TsZQCymiCWboIJPN/iZvcpztU/iLvWaCW3GNiMREbyjFILD+Kj7Lg3EGJaeGBCi4Q==", "method"=>"post"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:33:38 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:35:21 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:35:21 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 42ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:35:25 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/n9AP+7GDf1QY8Lk8vMhApzZi8gSOz1U/2IyIQdc2zj7ZCxPW90CAPdVhRKQdgQYcTC0U0lDcINymreGs54Tww==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 77ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:35:26 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:35:26 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:35:31 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/logout?method=post" for ::1 at 2017-03-12 17:35:32 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DtZt4LTUL6opaMhIxawhIq9WRFIaCoG6NMVECNDjgnsLzQGQAc8gV45ej76nKQQ4Qr97yUFyzG25PcGvZCFKgA==", "method"=>"post"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:35:32 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:35:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 47ms (Views: 29.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:35:50 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:35:50 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:35:56 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C1LvAYnNnBx9PSj18H0KrBHjbGHU0noCsgG7zmqe8GAM3pzGQglNOe6jVnDicI/cAObQbepgt7KlsgLoKDmX+A==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 81ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:35:57 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:35:57 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 17:35:59 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 65ms (Views: 32.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/logout?method=post" for ::1 at 2017-03-12 17:36:47 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fv928wwWDw8jlNzL5ZiIwDIwpNj3+vM964I9r515cbid44cB/SJGa8QLfY9m+dTEc1+n11tJnzgHbHQ/NKCXg==", "method"=>"post"}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-12 17:36:47 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 43ms (Views: 25.3ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/login" for ::1 at 2017-03-12 17:36:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PakKOlNpGHTa6MGXZu7U+DFqFPTgutZO5oRntLYPlx3VgD7pnAKdVXSoBjAwhcB81JcccTvpinG7cOqLVX60uw==", "account"=>{"username"=>"charlie", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "charlie"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:36:50 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (55.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered welcome/index.html.erb within layouts/application (71.4ms)
+Completed 200 OK in 282ms (Views: 38.0ms | ActiveRecord: 60.6ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:38:46 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (34.2ms)
+Completed 200 OK in 60ms (Views: 55.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:38:47 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 36ms (Views: 31.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:38:54 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (29.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Account:0x007ffb2d00a9d0>):
+     7: <div class="feed">
+     8:   <% @listings.each do |l| %>
+     9:   <h3><%= l.name %></h3>
+    10:   <p><%= l.account.name %></p>
+    11:   <p><%= l.description %></p>
+    12:   <% end %>
+    13: </div>
+  
+app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb___452245094871332959_70358384707680'
+app/views/welcome/index.html.erb:8:in `_app_views_welcome_index_html_erb___452245094871332959_70358384707680'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (85.5ms)
+Started GET "/" for ::1 at 2017-03-12 17:39:00 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 17:39:13 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 33ms (Views: 29.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-03-12 18:00:14 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (116.8ms)
+Completed 500 Internal Server Error in 143ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `link_do' for #<#<Class:0x007ffb2faf30c0>:0x007ffb2e9bb028>
+Did you mean?  link_to):
+     7: <div class="feed">
+     8:   <% @listings.each do |l| %>
+     9:   <h3><%= l.name %></h3>
+    10:   <p><%= link_do l.account.username, accounts_path(l.account.id) %></p>
+    11:   <p><%= l.description %></p>
+    12:   <p>-----------------</p>
+    13:   <% end %>
+  
+app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb___452245094871332959_70358397748460'
+app/views/welcome/index.html.erb:8:in `_app_views_welcome_index_html_erb___452245094871332959_70358397748460'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.0ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.6ms)
+Started GET "/" for ::1 at 2017-03-12 18:01:20 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 415ms (Views: 409.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/accounts.1" for ::1 at 2017-03-12 18:01:22 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.1) lib/puma/configuration.rb:224:in `call'
+puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
+puma (3.8.1) lib/puma/server.rb:425:in `process_client'
+puma (3.8.1) lib/puma/server.rb:289:in `block in run'
+puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
+Started GET "/accounts.1" for ::1 at 2017-03-12 18:01:30 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.1) lib/puma/configuration.rb:224:in `call'
+puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
+puma (3.8.1) lib/puma/server.rb:425:in `process_client'
+puma (3.8.1) lib/puma/server.rb:289:in `block in run'
+puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+Started GET "/accounts.1" for ::1 at 2017-03-12 18:01:32 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.1) lib/puma/configuration.rb:224:in `call'
+puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
+puma (3.8.1) lib/puma/server.rb:425:in `process_client'
+puma (3.8.1) lib/puma/server.rb:289:in `block in run'
+puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+Started GET "/" for ::1 at 2017-03-12 18:02:06 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 75ms (Views: 70.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/accounts/1" for ::1 at 2017-03-12 18:02:07 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 67ms (Views: 29.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/2" for ::1 at 2017-03-12 18:02:10 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/1" for ::1 at 2017-03-12 18:02:12 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 27.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/accounts/1/listings/new" for ::1 at 2017-03-12 18:02:13 -0400
+Processing by ListingsController#new as HTML
+  Parameters: {"account_id"=>"1"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (136.2ms)
+Completed 200 OK in 168ms (Views: 164.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/accounts/1/listings" for ::1 at 2017-03-12 18:02:35 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sOjiVduJbUlIvS8XuUigDoJKVJcr238vCoIGVlO1qO5YwdaGFOLoaOb96LDvI7SKZ7dcEvCIIxBXdotpsMSLSA==", "listing"=>{"name"=>"drugs", "description"=>"super drugs", "account_id"=>"3"}, "commit"=>"Create Listing", "account_id"=>"1"}
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "drugs"], ["description", "super drugs"], ["account_id", 3], ["created_at", 2017-03-12 22:02:35 UTC], ["updated_at", 2017-03-12 22:02:35 UTC]]
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/3/listings/5
+Completed 302 Found in 29ms (ActiveRecord: 23.0ms)
+
+
+Started GET "/accounts/3/listings/5" for ::1 at 2017-03-12 18:02:35 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"3", "id"=>"5"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 83ms (Views: 31.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/accounts/3" for ::1 at 2017-03-12 18:02:39 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendered accounts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/accounts/3/listings" for ::1 at 2017-03-12 18:02:47 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
+  
+actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.1) lib/puma/configuration.rb:224:in `call'
+puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
+puma (3.8.1) lib/puma/server.rb:425:in `process_client'
+puma (3.8.1) lib/puma/server.rb:289:in `block in run'
+puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
+  Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+Started GET "/accounts/3/listings/1" for ::1 at 2017-03-12 18:02:50 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"3", "id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 26.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/3/listings/3" for ::1 at 2017-03-12 18:02:51 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"3", "id"=>"3"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 30ms (Views: 25.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/3/listings/4" for ::1 at 2017-03-12 18:02:56 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"3", "id"=>"4"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 23.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/accounts/3/listings/5" for ::1 at 2017-03-12 18:02:57 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"3", "id"=>"5"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  Rendered listings/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 24.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/accounts/2/listings/5" for ::1 at 2017-03-12 18:03:01 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"2", "id"=>"5"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."account_id" = $1[0m  [["account_id", 3]]
+  Rendered listings/show.html.erb within layouts/application (52.3ms)
+Completed 200 OK in 90ms (Views: 84.8ms | ActiveRecord: 1.1ms)
+
+

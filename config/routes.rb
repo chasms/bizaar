@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'accounts#show'
+  root 'welcome#index'
 
   resources :bids
   resources :accounts do

@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     @account = Account.find_by(username: params[:account][:username])
     return head(:forbidden) unless @account.try(:authenticate, params[:account][:password])
     session[:account_id] = @account.id
-    redirect_to account_path(@account)
+    redirect_to '/'
   end
 
   def destroy
