@@ -1,14 +1,15 @@
-
-<%=render "/layouts/search_bar"%>
-
 <%if @listings.empty? %>
-<div class="no_results_found">
-  Sorry, we couldn't find any results for your search
-</div>
-<%else%>
-<%@listings.each do |listing|%>
-  <div class="listing">
-    <%=link_to listing.name, account_listing_path(listing.account_id, listing.id)%>
+
+  <div class="no_results_found">
+    Sorry, we couldn't find any results for your search
   </div>
-<%end%>
+
+<%else%>
+
+  <%@listings.each do |listing|%>
+    <div class="listing">
+      <%=link_to listing.name, account_listing_path(listing.account_id, listing.id)%>
+    </div>
+  <%end%>
+
 <%end%>

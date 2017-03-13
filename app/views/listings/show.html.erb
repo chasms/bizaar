@@ -4,24 +4,30 @@
 
 <% if @account == @user %>
 
-<%= link_to "Edit Listing", edit_account_listing_path %>
-<%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"} %>
+<%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-primary" %>
+<%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
 
 
 <% else %>
+
   <%= form_for @bid do |f| %>
     <select name="bid[buyer_listing_id]">
       <% @user.listings.each do |listing| %>
-
-      <option value="<%= listing.id %>"><%= listing.name %></option>
+        <option value="<%= listing.id %>"><%= listing.name %></option>
       <%end%>
     </select>
-	<%= f.hidden_field :seller_listing_id, :value => @listing.id %>
-  	<%= f.submit "Bid" %>
+	  <%= f.hidden_field :seller_listing_id, :value => @listing.id %>
+  	<%= f.submit "Bid", id: "bid-submit" %>
   <% end %>
+
 <% end %>
 
 <% @bids.each do |bid| %>
+<p>
    <%= Listing.find(bid.buyer_listing_id).account.username + " offers " + Listing.find(bid.buyer_listing_id).name %>
   in exchange for <%= Listing.find(bid.seller_listing_id).name %>
+  <% if session[:account_id] == Listing.find(bid.seller_listing_id).account_id %>
+    <a href="#">Accept Bid</a>
+  <% end %>
+</p>
 <% end %>

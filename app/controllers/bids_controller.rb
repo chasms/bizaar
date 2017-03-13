@@ -6,20 +6,17 @@ class BidsController < ApplicationController
   end
 
   def create
-  	byebug
     @bid = Bid.create( bid_params )
    	@listing = Listing.find( params[:bid][:seller_listing_id] )
-   	byebug	
+
     if @bid.valid?
    	  @bid.save
-   	  redirect_to account_listing_path(@listing.account_id, @listing.id)
-    else
-    	redirect_to :new
     end
+      redirect_to account_listing_path(@listing.account_id, @listing.id)
   end
-  
-  private 
-  
+
+  private
+
     def bid_params
 	   params.require(:bid).permit(:buyer_listing_id, :seller_listing_id)
     end

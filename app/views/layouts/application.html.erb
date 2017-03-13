@@ -9,30 +9,7 @@
   </head>
 
   <body>
-  <nav class="navbar navbar-default">
-    <div class="container">
-        <div class="navbar-header">
-          <%= link_to "Bizaar", root_path, class: "navbar-brand" %>
-        </div>
-      <ul class="nav navbar-nav">
-        <% if logged_in? %>
-          <li><%= link_to "Logout", logout_path, method: "delete" %></li>
-        <% else %>
-          <li><%= link_to "Sign Up", new_account_path %></li>
-          <li><%= link_to "Login", login_path %></li>           
-        <% end %>
-      </ul>
-      <ul class="nav navbar-nav pull-right">
-        <li>
-          <a href-"#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Active Bids<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-
-          </ul>
-        </li>
-          <li style="padding-top:8px;"><span><%= link_to "Add Listing", '#', class: "btn btn-danger" %></span></li>
-      </ul>
-    </div>
-  </nav>
+    <%= render '/layouts/navbar' %>
     <%= yield %>
   </body>
 </html>

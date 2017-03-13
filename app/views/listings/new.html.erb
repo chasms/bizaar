@@ -1,18 +1,5 @@
+<%= render 'errors' %>
 
-<% if @listing.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@listing.errors.count, "error") %>
-      prohibited this listing from being saved:
-    </h2>
-
-    <ul>
-    <% @listing.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
 <div class="container">
   <%= form_for [@account, @listing] do |f| %>
   	<div class="field_with_errors">
@@ -28,4 +15,5 @@
   	<%= f.hidden_field :account_id, :value => session[:account_id] %>
   	<%= f.submit "Create Listing", class: "btn btn-primary" %>
   <% end %>
+  
 </div>
