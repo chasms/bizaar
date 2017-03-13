@@ -18,6 +18,7 @@ class AccountsController < ApplicationController
     if logged_in?
       @account = Account.find(params[:id])
       @listings = @account.listings.all
+      @bids =Bid.where('seller_listing_id = ?', @account.id)
     else
       redirect_to login_path
     end
