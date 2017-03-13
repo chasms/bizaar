@@ -63,8 +63,7 @@ class ListingsController < ApplicationController
 
 		def find_listing
 
-			@listing = Listing.where(id: params[:id])
-					byebug		
+			@listing = Listing.where(id: params[:id])	
 			unless @listing
 			 	redirect_to root_path
 			end
