@@ -8,7 +8,7 @@
 <%else%>
 <%@listings.each do |listing|%>
   <div class="listing">
-    <%=listing.name%>
+    <%=link_to listing.name, account_listing_path(listing.account_id, listing.id)%>
   </div>
 <%end%>
 <%end%>
