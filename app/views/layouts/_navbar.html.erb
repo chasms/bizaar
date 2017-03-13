@@ -5,13 +5,14 @@
         </div>
       <ul class="nav navbar-nav">
         <% if logged_in? %>
+            <li><%= link_to "Hello #{@account.username}! Account ID: #{session[:account_id]}", account_path(@account)%></li>
           	<li><%= link_to "Logout", logout_path, method: "delete" %></li>
 	      	<li>
 	      		<%= render '/layouts/search_bar' %>
 	      	</li>
         <% else %>
           <li><%= link_to "Sign Up", new_account_path %></li>
-          <li><%= link_to "Login", login_path %></li>           
+          <li><%= link_to "Login", login_path %></li>
         <% end %>
       </ul>
 
