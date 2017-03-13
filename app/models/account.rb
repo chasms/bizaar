@@ -6,4 +6,7 @@ class Account < ApplicationRecord
   validates :username, presence: true, uniqueness: true
   has_secure_password
   validates :password, presence: true, length: {minimum: 6}
+
+  has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "https://assets.audiomack.com/cloud-nineteen/1359969f8ca98439476d21b98933b1dc.jpeg"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 end
