@@ -1,16 +1,19 @@
 <h1>Hello <%= @account.username %>!</h1>
 
 <div class="new_listing"><%= link_to "Create a new listing!", new_account_listing_path(@account.id) %></div>
-
+<div>Account ID: <%= session[:account_id] %></div>
 <br>
 
 <h2><%= @account.username %>'s Listings</h2>
 <div class="feed">
   <% @listings.each do |l| %>
-  <h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
-  <p><%= link_to l.account.username, account_path(l.account_id) %></p>
-  <p><%= l.description %></p>
-  <p>-----------------</p>
+
+  	<% if l.account_id == session[:account_id] %>
+  		<h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
+  		<p><%= link_to l.account.username, account_path(l.account_id) %></p>
+  		<p><%= l.description %></p>
+  		<p>-----------------</p>
+  	<% end %>
   <% end %>
 </div>
 

@@ -16,5 +16,5 @@
 <%= form_for [@account, @listing] do |f| %>
 	<%= f.text_field :name %>
 	<%= f.text_field :description %>
-	<%= f.submit %>
+	<%= f.submit class: "btn btn-primary" %>
 <% end %>

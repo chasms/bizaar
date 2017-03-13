@@ -21,8 +21,8 @@ class ListingsController < ApplicationController
 	end
 
 	def show
-	    	@bids = Bid.where(seller_listing_id: @listing.id)
-	    	@bid = Bid.new
+	    @bids = Bid.where(seller_listing_id: @listing.id)
+	    @bid = Bid.new
 	end
 
 	def index
