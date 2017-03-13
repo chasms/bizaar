@@ -5,7 +5,8 @@
         </div>
       <ul class="nav navbar-nav">
         <% if logged_in? %>
-            <li><%= link_to "Hello #{@account.username}! Account ID: #{session[:account_id]}", account_path(@account)%></li>
+            <% byebug %>
+            <li><%= link_to "Hello #{Account.find(session[:account_id]).username}! Account ID: #{session[:account_id]}", account_path(session[:account_id])%></li>
           	<li><%= link_to "Logout", logout_path, method: "delete" %></li>
 	      	<li>
 	      		<%= render '/layouts/search_bar' %>
