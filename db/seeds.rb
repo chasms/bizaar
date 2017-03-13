@@ -120,6 +120,11 @@ Listing.create([
     account_id: 7
   },
   {
+    name: "Platinum Funk",
+    description: "Taste it. Feel it.",
+    account_id: 7
+  },
+  {
     name: "Happy Meal",
     description: "Balled up.",
     account_id: 7
