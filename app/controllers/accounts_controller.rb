@@ -29,7 +29,4 @@ class AccountsController < ApplicationController
     params.require(:account).permit(*args)
   end
 
-  def logged_in?
-    session[:account_id] != nil
-  end
 end

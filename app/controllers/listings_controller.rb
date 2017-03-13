@@ -21,8 +21,8 @@ class ListingsController < ApplicationController
 	end
 
 	def show
-    	@bids = Bid.where(seller_listing_id: @listing.id)
-    	@bid = Bid.new
+	    	@bids = Bid.where(seller_listing_id: @listing.id)
+	    	@bid = Bid.new
 	end
 
 	def index
@@ -62,12 +62,21 @@ class ListingsController < ApplicationController
 		end
 
 		def find_listing
-			@listing = Listing.find(params[:id])
+
+			@listing = Listing.where(id: params[:id])
+					byebug		
+			unless @listing
+			 	redirect_to root_path
+			end
 		end
 
 		def find_account
 
-		  @account = Account.find(@listing.account_id)
+			if logged_in?
+			  	@account = Account.find(@listing.account_id)
+			else
+				redirect_to login_path
+			end
 		end
 
 		def find_user
