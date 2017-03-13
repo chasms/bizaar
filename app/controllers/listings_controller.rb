@@ -63,7 +63,7 @@ class ListingsController < ApplicationController
 
 		def find_listing
 
-			@listing = Listing.where(id: params[:id])	
+			@listing = Listing.where(id: params[:id])[0]	
 			unless @listing
 			 	redirect_to root_path
 			end
@@ -72,6 +72,7 @@ class ListingsController < ApplicationController
 		def find_account
 
 			if logged_in?
+
 			  	@account = Account.find(@listing.account_id)
 			else
 				redirect_to login_path
