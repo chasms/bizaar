@@ -31,9 +31,9 @@ Completed 200 OK in 11ms (Views: 7.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/authors/1" for ::1 at 2017-03-10 11:11:28 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/authors/1"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -75,9 +75,9 @@ Processing by AccountsController#new as HTML
 Completed 500 Internal Server Error in 287ms (ActiveRecord: 11.1ms)
 
 
-  
+
 ActionView::Template::Error (couldn't find file 'turbolinks' with type 'application/javascript'
-Checked in these paths: 
+Checked in these paths:
   /Users/charles/.atom/.learn-ide/home/chasms-38350/code/bizaar/app/assets/config
   /Users/charles/.atom/.learn-ide/home/chasms-38350/code/bizaar/app/assets/images
   /Users/charles/.atom/.learn-ide/home/chasms-38350/code/bizaar/app/assets/javascripts
@@ -89,12 +89,12 @@ Checked in these paths:
   /Users/charles/.rvm/gems/ruby-2.3.0/gems/actioncable-5.0.2/lib/assets/compiled):
     4:     <title>Bizaar</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     9:   </head>
-   10: 
-  
+   10:
+
 app/assets/javascripts/application.js:15
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__2071660748771621869_70261234933140'
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -120,9 +120,9 @@ Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
 
 
 Started POST "/accounts" for ::1 at 2017-03-10 11:14:52 -0500
-  
+
 AbstractController::ActionNotFound (The action 'create' could not be found for AccountsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -278,12 +278,12 @@ Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 1.2ms)
 
 
 Started GET "/" for ::1 at 2017-03-10 16:16:57 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -343,12 +343,12 @@ puma (3.8.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/ben/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /Users/ben/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (751.1ms)
 Started GET "/" for ::1 at 2017-03-10 16:17:18 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -408,12 +408,12 @@ puma (3.8.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/ben/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/ben/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.7ms)
 Started GET "/" for ::1 at 2017-03-10 16:17:59 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -521,9 +521,9 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (uninitialized constant SessionsController::User):
-  
+
 app/controllers/sessions_controller.rb:3:in `new'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -534,9 +534,9 @@ app/controllers/sessions_controller.rb:3:in `new'
   Rendered /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.6ms)
   Rendered /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.7ms)
 Started GET "/listings/new" for ::1 at 2017-03-10 16:54:21 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/listings/new"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -577,9 +577,9 @@ Processing by ListingsController#new as HTML
 Completed 404 Not Found in 21ms (ActiveRecord: 7.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Listing with 'id'=):
-  
+
 app/controllers/listings_controller.rb:37:in `find_listing'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -596,9 +596,9 @@ Processing by ListingsController#new as HTML
 Completed 404 Not Found in 15ms (ActiveRecord: 5.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Listing with 'id'=):
-  
+
 app/controllers/listings_controller.rb:37:in `find_listing'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -630,9 +630,9 @@ Processing by ListingsController#show as HTML
 Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Listing with 'id'=1):
-  
+
 app/controllers/listings_controller.rb:37:in `find_listing'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -672,9 +672,9 @@ Completed 200 OK in 22ms (Views: 16.0ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/new" for ::1 at 2017-03-10 16:59:18 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/new"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -716,7 +716,7 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 25ms (ActiveRecord: 7.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
@@ -724,7 +724,7 @@ ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
     4: 	<%= f.hidden_field :account_id, session[:account_id] %>
     5: 	<%= f.submit %>
     6: <% end %>
-  
+
 app/views/listings/new.html.erb:4:in `block in _app_views_listings_new_html_erb___838052848130293883_70335544694200'
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb___838052848130293883_70335544694200'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -742,7 +742,7 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
@@ -750,7 +750,7 @@ ActionView::Template::Error (undefined method `merge' for 1:Fixnum):
     4: 	<%= f.hidden_field :account_id, value=session[:account_id] %>
     5: 	<%= f.submit %>
     6: <% end %>
-  
+
 app/views/listings/new.html.erb:4:in `block in _app_views_listings_new_html_erb___838052848130293883_70335555484300'
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb___838052848130293883_70335555484300'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -768,7 +768,7 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 187ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `value' for #<#<Class:0x007ff091863e98>:0x007ff090a9ef38>):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
@@ -776,7 +776,7 @@ ActionView::Template::Error (undefined local variable or method `value' for #<#<
     4: 	<%= f.hidden_field :account_id, value => session[:account_id] %>
     5: 	<%= f.submit %>
     6: <% end %>
-  
+
 app/views/listings/new.html.erb:4:in `block in _app_views_listings_new_html_erb___838052848130293883_70335597968520'
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb___838052848130293883_70335597968520'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -804,9 +804,9 @@ Completed 200 OK in 33ms (Views: 24.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/listings" for ::1 at 2017-03-10 17:01:13 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -977,9 +977,9 @@ Completed 200 OK in 30ms (Views: 24.4ms | ActiveRecord: 0.8ms)
 
 
 Started GET "/listing/" for ::1 at 2017-03-11 16:08:40 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/listing"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -1117,9 +1117,9 @@ Processing by AccountsController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=logout):
-  
+
 app/controllers/accounts_controller.rb:25:in `set_account'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1138,9 +1138,9 @@ Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/new" for ::1 at 2017-03-11 16:16:59 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/new"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -1246,13 +1246,13 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 112ms (ActiveRecord: 4.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings_path' for #<#<Class:0x007fe8d7f54a20>:0x007fe8d61a9d68>):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.hidden_field :account_id, :value => session[:account_id] %>
-  
+
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb__2367092187006448345_70319016161240'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1271,13 +1271,13 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 132ms (ActiveRecord: 5.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings_path' for #<#<Class:0x007fba41fb3af8>:0x007fba44d5ef98>):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.hidden_field :account_id, :value => session[:account_id] %>
-  
+
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb___3860282694025451027_70218997687600'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1295,13 +1295,13 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 107ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings_path' for #<#<Class:0x007fba44ba7510>:0x007fba44b9f130>):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.hidden_field :account_id, :value => session[:account_id] %>
-  
+
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb___3860282694025451027_70218972471940'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1320,13 +1320,13 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 137ms (ActiveRecord: 5.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings_path' for #<#<Class:0x007fd66e862008>:0x007fd66e3f9ed0>):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.hidden_field :account_id, :value => session[:account_id] %>
-  
+
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb__1785210492968968546_70279477009080'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1344,14 +1344,14 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 172ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `listings_path' for #<#<Class:0x007fd66e862008>:0x007fd66beaa508>
 Did you mean?  @listing):
     1: <%= form_for listings_path do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.hidden_field :account_id, :value => session[:account_id] %>
-  
+
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb__1785210492968968546_70279455135640'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1385,13 +1385,13 @@ Processing by ListingsController#new as HTML
 Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings_path' for #<#<Class:0x007fd66e862008>:0x007fd670880358>):
     1: <%= form_for [@account, @listing] do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.hidden_field :account_id, :value => session[:account_id] %>
-  
+
 app/views/listings/new.html.erb:1:in `_app_views_listings_new_html_erb__1785210492968968546_70279493846680'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1408,9 +1408,9 @@ Processing by ListingsController#new as HTML
 Completed 404 Not Found in 16ms (ActiveRecord: 6.9ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/listings_controller.rb:40:in `find_account'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1437,14 +1437,14 @@ Processing by ListingsController#create as HTML
   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "new product"], ["description", "its cool"], ["account_id", 4], ["created_at", 2017-03-11 21:25:45 UTC], ["updated_at", 2017-03-11 21:25:45 UTC]]
   [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
-Redirected to 
+Redirected to
 Completed 500 Internal Server Error in 140ms (ActiveRecord: 5.0ms)
 
 
-  
+
 NoMethodError (undefined method `listing_url' for #<ListingsController:0x007fd66bfabc68>
 Did you mean?  listing_params):
-  
+
 app/controllers/listings_controller.rb:12:in `create'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1455,9 +1455,9 @@ app/controllers/listings_controller.rb:12:in `create'
   Rendered /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.4ms)
 Started GET "/accounts/4/listings" for ::1 at 2017-03-11 16:26:21 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -1530,9 +1530,9 @@ Processing by ListingsController#create as HTML
 Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.1ms)
 
 
-  
+
 ActionController::UrlGenerationError (No route matches {:account_id=>#<Listing id: 5, name: "test", description: "test", account_id: 4, created_at: "2017-03-11 21:26:35", updated_at: "2017-03-11 21:26:35">, :action=>"show", :controller=>"listings"} missing required keys: [:id]):
-  
+
 app/controllers/listings_controller.rb:12:in `create'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1559,14 +1559,14 @@ Processing by ListingsController#create as HTML
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "test"], ["description", "test"], ["account_id", 4], ["created_at", 2017-03-11 21:26:59 UTC], ["updated_at", 2017-03-11 21:26:59 UTC]]
   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
-Redirected to 
+Redirected to
 Completed 500 Internal Server Error in 115ms (ActiveRecord: 2.7ms)
 
 
-  
+
 NoMethodError (undefined method `listing_url' for #<ListingsController:0x007fd670c18650>
 Did you mean?  listing_params):
-  
+
 app/controllers/listings_controller.rb:12:in `create'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1577,9 +1577,9 @@ app/controllers/listings_controller.rb:12:in `create'
   Rendered /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.1ms)
 Started GET "/accounts/4/listings" for ::1 at 2017-03-11 16:27:40 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -1652,9 +1652,9 @@ Processing by ListingsController#create as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.0ms)
 
 
-  
+
 ActionController::UrlGenerationError (No route matches {:account_id=>#<Listing id: 7, name: "tester", description: "tester", account_id: 4, created_at: "2017-03-11 21:27:47", updated_at: "2017-03-11 21:27:47">, :action=>"show", :controller=>"listings"} missing required keys: [:id]):
-  
+
 app/controllers/listings_controller.rb:12:in `create'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1685,9 +1685,9 @@ Processing by ListingsController#create as HTML
 Completed 500 Internal Server Error in 316359ms (ActiveRecord: 3.3ms)
 
 
-  
+
 ActionController::UrlGenerationError (No route matches {:account_id=>#<Listing id: 8, name: "testing", description: "testing", account_id: 4, created_at: "2017-03-11 21:28:17", updated_at: "2017-03-11 21:28:17">, :action=>"show", :controller=>"listings"} missing required keys: [:id]):
-  
+
 app/controllers/listings_controller.rb:13:in `create'
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Bram/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1730,9 +1730,9 @@ Completed 200 OK in 23ms (Views: 17.7ms | ActiveRecord: 0.7ms)
 
 
 Started GET "/accounts/4/listing/new" for ::1 at 2017-03-11 16:34:27 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/accounts/4/listing/new"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -1847,9 +1847,9 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ArgumentError (Unknown key: :through. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :foreign_type, :dependent, :primary_key, :inverse_of, :required, :polymorphic, :touch, :counter_cache, :optional):
-  
+
 app/models/bid.rb:4:in `<class:Bid>'
 app/models/bid.rb:1:in `<top (required)>'
 app/controllers/bids_controller.rb:5:in `new'
@@ -1868,10 +1868,10 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 62ms (ActiveRecord: 6.0ms)
 
 
-  
+
 SyntaxError (/Users/Nany/Development/code/bizaar/app/views/bids/new.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/Nany/Development/code/bizaar/app/views/bids/new.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/bids/new.html.erb:10: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/bids/new.html.erb:12: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1890,7 +1890,7 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings' for #<ActiveRecord::Relation []>):
     1: <%= form_for @bid do |f| %>
     2:   <select>
@@ -1898,7 +1898,7 @@ ActionView::Template::Error (undefined method `listings' for #<ActiveRecord::Rel
     4:     <option value="<%= listing.id %>"><%= listing.name %></option>
     5:     <%end%>
     6:   </select>
-  
+
 app/views/bids/new.html.erb:3:in `block in _app_views_bids_new_html_erb__729974308217492671_70293408071400'
 app/views/bids/new.html.erb:1:in `_app_views_bids_new_html_erb__729974308217492671_70293408071400'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -1986,9 +1986,9 @@ Completed 200 OK in 67ms (Views: 22.6ms | ActiveRecord: 1.5ms)
 
 
 Started GET "/accounts/1/listings" for ::1 at 2017-03-11 18:00:36 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -2042,9 +2042,9 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
   Rendered /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
 Started GET "/accounts/1/listing/1" for ::1 at 2017-03-11 18:00:44 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/accounts/1/listing/1"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -2098,7 +2098,7 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings' for #<ActiveRecord::Relation []>):
     1: <%= form_for @bid do |f| %>
     2:   <select>
@@ -2106,7 +2106,7 @@ ActionView::Template::Error (undefined method `listings' for #<ActiveRecord::Rel
     4:     <option value="<%= listing.id %>"><%= listing.name %></option>
     5:     <%end%>
     6:   </select>
-  
+
 app/views/bids/new.html.erb:3:in `block in _app_views_bids_new_html_erb__729974308217492671_70293443529500'
 app/views/bids/new.html.erb:1:in `_app_views_bids_new_html_erb__729974308217492671_70293443529500'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -2127,7 +2127,7 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings' for #<ActiveRecord::Relation []>):
     1: <%= form_for @bid do |f| %>
     2:   <select>
@@ -2135,7 +2135,7 @@ ActionView::Template::Error (undefined method `listings' for #<ActiveRecord::Rel
     4:     <%byebug%>
     5:     <option value="<%= listing.id %>"><%= listing.name %></option>
     6:     <%end%>
-  
+
 app/views/bids/new.html.erb:3:in `block in _app_views_bids_new_html_erb__729974308217492671_70293469792920'
 app/views/bids/new.html.erb:1:in `_app_views_bids_new_html_erb__729974308217492671_70293469792920'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -2159,16 +2159,16 @@ Completed 500 Internal Server Error in 107681ms (ActiveRecord: 0.7ms)
 
 
 Processing by BidsController#new as HTML
-  
+
 Processing by BidsController#new as HTML
   Rendering bids/new.html.erb within layouts/application
 Started GET "/" for ::1 at 2017-03-11 18:25:21 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2228,12 +2228,12 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (150.2ms)
 Started GET "/authors/1" for ::1 at 2017-03-11 18:25:49 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2293,12 +2293,12 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (224.0ms)
 Started GET "/" for ::1 at 2017-03-11 18:25:51 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2358,12 +2358,12 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (128.6ms)
 Started GET "/" for ::1 at 2017-03-11 18:25:55 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2423,12 +2423,12 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (114.1ms)
 Started GET "/authors/1" for ::1 at 2017-03-11 18:25:57 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2488,12 +2488,12 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.3ms)
 Started GET "/accounts/1" for ::1 at 2017-03-11 18:25:57 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2553,12 +2553,12 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.0ms)
 Started GET "/accounts/1" for ::1 at 2017-03-11 18:25:58 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.2) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -2628,7 +2628,7 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   [1m[35m (128.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bizaar_development"[0m
   [1m[35m (135.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bizaar_test"[0m
 Started GET "/accounts/new" for ::1 at 2017-03-11 18:27:51 -0500
-  
+
 ActiveRecord::PendingMigrationError (
 
 Migrations are pending. To resolve this issue, run:
@@ -2636,7 +2636,7 @@ Migrations are pending. To resolve this issue, run:
         bin/rails db:migrate RAILS_ENV=development
 
 ):
-  
+
 activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
 activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
 actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
@@ -2743,12 +2743,12 @@ Processing by AccountsController#show as HTML
 Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActionView::Template::Error (No route matches {:action=>"new", :controller=>"listings", :id=>"1"} missing required keys: [:account_id]):
     1: <h1>Hello <%= @account.username %>!</h1>
-    2: 
+    2:
     3: <%= link_to "Create a new listing!", new_account_listing_path %>
-  
+
 app/views/accounts/show.html.erb:3:in `_app_views_accounts_show_html_erb___3249180943409572150_70257970303100'
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2837,10 +2837,10 @@ Processing by ListingsController#show as HTML
 Completed 500 Internal Server Error in 213ms (ActiveRecord: 7.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fcc6b794188>:0x007fcc6b78ee68>):
     1: <%= link_to "#{@listing.name}", @listing %>
-  
+
 app/views/listings/show.html.erb:1:in `_app_views_listings_show_html_erb___2213352294716981177_70257976583440'
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2906,15 +2906,15 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 76ms (ActiveRecord: 16.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings' for #<Account::ActiveRecord_Relation:0x007fcc6b3779b0>):
     1: <%= form_for @bid do |f| %>
     2:   <select>
     3:     <% @user.listings.each do |listing| %>
-    4: 
+    4:
     5:     <option value="<%= listing.id %>"><%= listing.name %></option>
     6:     <%end%>
-  
+
 app/views/bids/new.html.erb:3:in `block in _app_views_bids_new_html_erb___2384857700524108704_70257973260760'
 app/views/bids/new.html.erb:1:in `_app_views_bids_new_html_erb___2384857700524108704_70257973260760'
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -2939,16 +2939,16 @@ Processing by BidsController#new as HTML
 Completed 500 Internal Server Error in 223320ms (ActiveRecord: 4.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listings' for #<Account::ActiveRecord_Relation:0x007fcc6e1afcb0>):
     1: <%= form_for @bid do |f| %>
     2:   <% byebug %>
     3:   <select>
     4:     <% @user.listings.each do |listing| %>
-    5: 
+    5:
     6:     <option value="<%= listing.id %>"><%= listing.name %></option>
     7:     <%end%>
-  
+
 app/views/bids/new.html.erb:4:in `block in _app_views_bids_new_html_erb___2384857700524108704_70257998640360'
 app/views/bids/new.html.erb:1:in `_app_views_bids_new_html_erb___2384857700524108704_70257998640360'
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -2974,9 +2974,9 @@ Processing by BidsController#new as HTML
 Completed 404 Not Found in 12ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/bids_controller.rb:4:in `new'
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3074,10 +3074,10 @@ Processing by ListingsController#show as HTML
 Completed 500 Internal Server Error in 121ms (ActiveRecord: 2.4ms)
 
 
-  
+
 SyntaxError (/Users/charles/.atom/.learn-ide/home/chasms-38350/code/bizaar/app/views/listings/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/charles/.atom/.learn-ide/home/chasms-38350/code/bizaar/app/views/listings/show.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/listings/show.html.erb:16: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/listings/show.html.erb:18: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3122,9 +3122,9 @@ Completed 200 OK in 79ms (Views: 65.1ms | ActiveRecord: 1.6ms)
 
 
 Started GET "/accounts/1/logout" for ::1 at 2017-03-11 18:51:13 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/accounts/1/logout"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -3251,9 +3251,9 @@ Processing by ListingsController#index as HTML
 Completed 404 Not Found in 196ms (ActiveRecord: 165.2ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/listings_controller.rb:47:in `find_account'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3427,9 +3427,9 @@ Processing by ListingsController#index as HTML
 Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/listings_controller.rb:47:in `find_account'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3446,16 +3446,16 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial listings/_search_bar, application/_search_bar with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/Nany/Development/code/bizaar/app/views"
 ):
-    1: 
+    1:
     2: <%render "search_bar"%>
-    3: 
-    4: 
+    3:
+    4:
     5: <%@listings.each do |listing|%>
-  
+
 app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270355424800'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3473,9 +3473,9 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
-  
+
 app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
 app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270356808640'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3494,9 +3494,9 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
-  
+
 app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
 app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270371467020'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3515,9 +3515,9 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
-  
+
 app/views/layouts/_search_bar.html.erb:8: syntax error, unexpected keyword_ensure, expecting end-of-input
 app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270357709200'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3592,11 +3592,11 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/Nany/Development/code/bizaar/app/views/layouts/_search_bar.html.erb:4: syntax error, unexpected ':', expecting ')'
 ....append=( submit_tag "search" :name=> nil);@output_buffer.sa...
 ...                               ^):
-  
+
 app/views/layouts/_search_bar.html.erb:4: syntax error, unexpected ':', expecting ')'
 app/views/listings/index.html.erb:2:in `_app_views_listings_index_html_erb__2380085980187394543_70270357400220'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3617,19 +3617,19 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 77ms (ActiveRecord: 63.2ms)
 
 
-  
+
 ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type record
 LINE 1: SELECT COUNT(*) FROM "listings" WHERE (name, description LIK...
                                               ^
 : SELECT COUNT(*) FROM "listings" WHERE (name, description LIKE '%plates%')):
-    1: 
+    1:
     2: <%=render "/layouts/search_bar"%>
-    3: 
+    3:
     4: <%if @listings.empty? %>
     5: <div class="no_results_found">
     6:   Sorry, we couldn't find any results for your search
     7: </div>
-  
+
 app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270310952160'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3646,9 +3646,9 @@ Processing by ListingsController#index as HTML
 Completed 404 Not Found in 10ms (ActiveRecord: 4.7ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find all Listings with 'id': (name, description LIKE ?, %plates%) (found 0 results, but was looking for 2)):
-  
+
 app/models/listing.rb:8:in `search'
 app/controllers/listings_controller.rb:28:in `index'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3666,9 +3666,9 @@ Processing by ListingsController#index as HTML
 Completed 404 Not Found in 9ms (ActiveRecord: 4.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find all Listings with 'id': (name, description LIKE ?, %plates%) (found 0 results, but was looking for 2)):
-  
+
 app/models/listing.rb:8:in `search'
 app/controllers/listings_controller.rb:28:in `index'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3689,19 +3689,19 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.1ms)
 
 
-  
+
 ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of WHERE must be type boolean, not type record
 LINE 1: SELECT COUNT(*) FROM "listings" WHERE (name, description lik...
                                               ^
 : SELECT COUNT(*) FROM "listings" WHERE (name, description like '%plates%')):
-    1: 
+    1:
     2: <%=render "/layouts/search_bar"%>
-    3: 
+    3:
     4: <%if @listings.empty? %>
     5: <div class="no_results_found">
     6:   Sorry, we couldn't find any results for your search
     7: </div>
-  
+
 app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270307736220'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3750,9 +3750,9 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 2) in: name like ?, or description like ?):
-  
+
 app/models/listing.rb:8:in `search'
 app/controllers/listings_controller.rb:28:in `index'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3769,9 +3769,9 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (1 for 2) in: name like ?, or description like ?):
-  
+
 app/models/listing.rb:8:in `search'
 app/controllers/listings_controller.rb:28:in `index'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -3792,19 +3792,19 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 61ms (ActiveRecord: 43.2ms)
 
 
-  
+
 ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "or"
 LINE 1: ...OUNT(*) FROM "listings" WHERE (name like '%pla%', or descrip...
                                                              ^
 : SELECT COUNT(*) FROM "listings" WHERE (name like '%pla%', or description like '%pla%')):
-    1: 
+    1:
     2: <%=render "/layouts/search_bar"%>
-    3: 
+    3:
     4: <%if @listings.empty? %>
     5: <div class="no_results_found">
     6:   Sorry, we couldn't find any results for your search
     7: </div>
-  
+
 app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270372086120'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3824,7 +3824,7 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "or"
 LINE 1: ...ings".* FROM "listings" WHERE (name like '%pla%', or descrip...
                                                              ^
@@ -3836,7 +3836,7 @@ LINE 1: ...ings".* FROM "listings" WHERE (name like '%pla%', or descrip...
     10:   <div class="listing">
     11:     <%=listing.name%>
     12:   </div>
-  
+
 app/views/listings/index.html.erb:9:in `_app_views_listings_index_html_erb__2380085980187394543_70270358428060'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3860,19 +3860,19 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 147233ms (ActiveRecord: 22.8ms)
 
 
-  
+
 ActionView::Template::Error (PG::SyntaxError: ERROR:  syntax error at or near "or"
 LINE 1: ...UNT(*) FROM "listings" WHERE (name like '%plat%', or descrip...
                                                              ^
 : SELECT COUNT(*) FROM "listings" WHERE (name like '%plat%', or description like '%plat%')):
-    1: 
+    1:
     2: <%=render "/layouts/search_bar"%>
     3: <%byebug%>
     4: <%if @listings.empty? %>
     5: <div class="no_results_found">
     6:   Sorry, we couldn't find any results for your search
     7: </div>
-  
+
 app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270371976820'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3985,9 +3985,9 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActiveRecord::PreparedStatementInvalid (wrong number of bind variables (3 for 1) in: description like ?):
-  
+
 app/models/listing.rb:8:in `search'
 app/controllers/listings_controller.rb:28:in `index'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -4008,19 +4008,19 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.1ms)
 
 
-  
+
 ActionView::Template::Error (PG::DatatypeMismatch: ERROR:  argument of OR must be type boolean, not type character varying
 LINE 1: SELECT COUNT(*) FROM "listings" WHERE (description or name l...
                                                ^
 : SELECT COUNT(*) FROM "listings" WHERE (description or name like '%towel%')):
-    1: 
+    1:
     2: <%=render "/layouts/search_bar"%>
-    3: 
+    3:
     4: <%if @listings.empty? %>
     5: <div class="no_results_found">
     6:   Sorry, we couldn't find any results for your search
     7: </div>
-  
+
 app/views/listings/index.html.erb:4:in `_app_views_listings_index_html_erb__2380085980187394543_70270358852620'
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/Nany/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4048,12 +4048,12 @@ Processing by ListingsController#index as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/Nany/Development/code/bizaar/app/models/listing.rb:8: syntax error, unexpected ',', expecting ')'
 		self.where(('description, name) like ?', "%#{search}%")
 		                                        ^
 /Users/Nany/Development/code/bizaar/app/models/listing.rb:9: syntax error, unexpected keyword_else, expecting ')'):
-  
+
 app/models/listing.rb:8: syntax error, unexpected ',', expecting ')'
 app/models/listing.rb:9: syntax error, unexpected keyword_else, expecting ')'
 app/controllers/listings_controller.rb:28:in `index'
@@ -4309,9 +4309,9 @@ Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/accounts" for ::1 at 2017-03-12 00:18:52 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -4450,9 +4450,9 @@ Completed 200 OK in 33ms (Views: 15.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/acco" for ::1 at 2017-03-12 00:29:29 -0500
-  
+
 ActionController::RoutingError (No route matches [GET] "/acco"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -4552,9 +4552,9 @@ Unpermitted parameter: password
 Completed 500 Internal Server Error in 27277ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SystemExit (exit):
-  
+
 app/controllers/sessions_controller.rb:9:in `create'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4652,12 +4652,12 @@ Processing by SessionsController#create as HTML
 Completed 500 Internal Server Error in 73ms (ActiveRecord: 70.4ms)
 
 
-  
+
 ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column "charlie" does not exist
 LINE 1: SELECT  "accounts".* FROM "accounts" WHERE (charlie) LIMIT $...
                                                     ^
 : SELECT  "accounts".* FROM "accounts" WHERE (charlie) LIMIT $1):
-  
+
 app/controllers/sessions_controller.rb:8:in `create'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4742,11 +4742,11 @@ Processing by AccountsController#show as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms)
 
 
-  
+
 SyntaxError (/Users/ben/Development/code/bizaar/app/views/accounts/show.html.erb:9: syntax error, unexpected '<'
 <% end );@output_buffer.safe_append='
  ^):
-  
+
 app/views/accounts/show.html.erb:9: syntax error, unexpected '<'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4779,7 +4779,7 @@ Processing by SessionsController#new as HTML
 Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `submit=' for #<ActionView::Helpers::FormBuilder:0x007fef2d192e08>
 Did you mean?  submit):
     23:     <%= f.password_field :password %>
@@ -4788,7 +4788,7 @@ Did you mean?  submit):
     26:     <%= f.submit, value='Log In' %>
     27:   </div>
     28: <% end %>
-  
+
 app/views/sessions/new.html.erb:26:in `block in _app_views_sessions_new_html_erb__1608992310138627433_70332643902700'
 app/views/sessions/new.html.erb:16:in `_app_views_sessions_new_html_erb__1608992310138627433_70332643902700'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -4874,9 +4874,9 @@ Processing by AccountsController#show as HTML
 Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/accounts_controller.rb:25:in `set_account'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4893,13 +4893,13 @@ Processing by AccountsController#show as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `username' for nil:NilClass):
     1: <h1>Hello <%= @account.username %>!</h1>
-    2: 
+    2:
     3: <div><%= link_to "Create a new listing!", new_account_listing_path(@account.id) %></div>
-    4: 
-  
+    4:
+
 app/views/accounts/show.html.erb:1:in `_app_views_accounts_show_html_erb__4024492787834880198_70332644149260'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -5087,9 +5087,9 @@ Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/accounts/3/listings" for ::1 at 2017-03-12 01:03:34 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -5249,9 +5249,9 @@ Completed 200 OK in 142ms (Views: 60.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/accounts" for ::1 at 2017-03-12 01:06:12 -0500
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -5713,12 +5713,12 @@ Completed 404 Not Found in 54ms (ActiveRecord: 10.3ms)
 Completed 404 Not Found in 50ms (ActiveRecord: 14.6ms)
 
 
-  
-  
+
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
-  
+
+
 app/controllers/accounts_controller.rb:18:in `show'
 app/controllers/accounts_controller.rb:18:in `show'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -5743,9 +5743,9 @@ Processing by AccountsController#show as HTML
 Completed 404 Not Found in 3ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/accounts_controller.rb:18:in `show'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -5814,9 +5814,9 @@ Processing by AccountsController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=):
-  
+
 app/controllers/accounts_controller.rb:18:in `show'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6240,7 +6240,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for #<Account:0x007ffb2d00a9d0>):
      7: <div class="feed">
      8:   <% @listings.each do |l| %>
@@ -6249,7 +6249,7 @@ ActionView::Template::Error (undefined method `name' for #<Account:0x007ffb2d00a
     11:   <p><%= l.description %></p>
     12:   <% end %>
     13: </div>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb___452245094871332959_70358384707680'
 app/views/welcome/index.html.erb:8:in `_app_views_welcome_index_html_erb___452245094871332959_70358384707680'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -6296,7 +6296,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 143ms (ActiveRecord: 1.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `link_do' for #<#<Class:0x007ffb2faf30c0>:0x007ffb2e9bb028>
 Did you mean?  link_to):
      7: <div class="feed">
@@ -6306,7 +6306,7 @@ Did you mean?  link_to):
     11:   <p><%= l.description %></p>
     12:   <p>-----------------</p>
     13:   <% end %>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb___452245094871332959_70358397748460'
 app/views/welcome/index.html.erb:8:in `_app_views_welcome_index_html_erb___452245094871332959_70358397748460'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -6331,9 +6331,9 @@ Completed 200 OK in 415ms (Views: 409.9ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/accounts.1" for ::1 at 2017-03-12 18:01:22 -0400
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -6387,9 +6387,9 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.6ms)
 Started GET "/accounts.1" for ::1 at 2017-03-12 18:01:30 -0400
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -6443,9 +6443,9 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
 Started GET "/accounts.1" for ::1 at 2017-03-12 18:01:32 -0400
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for AccountsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -6582,9 +6582,9 @@ Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/accounts/3/listings" for ::1 at 2017-03-12 18:02:47 -0400
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for ListingsController):
-  
+
 actionpack (5.0.2) lib/abstract_controller/base.rb:121:in `process'
 actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
 actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
@@ -6736,15 +6736,15 @@ Processing by ListingsController#show as HTML
 Completed 500 Internal Server Error in 122ms (ActiveRecord: 14.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for #<Account:0x007fefdb770b28>):
     1: <p>Name: <%= @listing.name %></p>
     2: <p>Description: <%= @listing.description %></p>
     3: <p>Seller: <%= @listing.account.name %></p>
-    4: 
+    4:
     5: <% unless @account == @user %>
     6:   <%= form_for @bid do |f| %>
-  
+
 app/views/listings/show.html.erb:3:in `_app_views_listings_show_html_erb__1103591034188932203_70334040681960'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6768,15 +6768,15 @@ Processing by ListingsController#show as HTML
 Completed 500 Internal Server Error in 23ms (ActiveRecord: 2.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for #<Account:0x007fefd625f620>):
     1: <p>Name: <%= @listing.name %></p>
     2: <p>Description: <%= @listing.description %></p>
     3: <p>Seller: <%= @listing.account.name %></p>
-    4: 
+    4:
     5: <% unless @account == @user %>
     6:   <%= form_for @bid do |f| %>
-  
+
 app/views/listings/show.html.erb:3:in `_app_views_listings_show_html_erb__1103591034188932203_70334028617220'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6872,9 +6872,9 @@ Processing by AccountsController#show as HTML
 Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=5):
-  
+
 app/controllers/accounts_controller.rb:18:in `show'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6894,7 +6894,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 386ms (ActiveRecord: 13.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fb7ba1d5d48>:0x007fb7bdd25da8>):
      7: <h2>All Listings</h2>
      8: <div class="feed">
@@ -6903,7 +6903,7 @@ ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007
     11:   <p><%= link_to l.account.username, account_path(l.account_id) %></p>
     12:   <p><%= l.description %></p>
     13:   <p>-----------------</p>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb__4527923774968477274_70213539116420'
 app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb__4527923774968477274_70213539116420'
 Started GET "/" for ::1 at 2017-03-12 18:55:54 -0400
@@ -6915,7 +6915,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 132ms (ActiveRecord: 1.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fb7ba1d5d48>:0x007fb7bab00a08>):
      7: <h2>All Listings</h2>
      8: <div class="feed">
@@ -6924,7 +6924,7 @@ ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007
     11:   <p><%= link_to l.account.username, account_path(l.account_id) %></p>
     12:   <p><%= l.description %></p>
     13:   <p>-----------------</p>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb__4527923774968477274_70213543922940'
 app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb__4527923774968477274_70213543922940'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -6952,7 +6952,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fb7ba1d5d48>:0x007fb7bae417a8>):
      7: <h2>All Listings</h2>
      8: <div class="feed">
@@ -6961,7 +6961,7 @@ ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007
     11:   <p><%= link_to l.account.username, account_path(l.account_id) %></p>
     12:   <p><%= l.description %></p>
     13:   <p>-----------------</p>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb__4527923774968477274_70213545628020'
 app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb__4527923774968477274_70213545628020'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -6981,7 +6981,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fb7ba1d5d48>:0x007fb7bad003f8>):
      7: <h2>All Listings</h2>
      8: <div class="feed">
@@ -6990,7 +6990,7 @@ ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007
     11:   <p><%= link_to l.account.username, account_path(l.account_id) %></p>
     12:   <p><%= l.description %></p>
     13:   <p>-----------------</p>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb__4527923774968477274_70213544970460'
 app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb__4527923774968477274_70213544970460'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -7010,7 +7010,7 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 119ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fb7ba1d5d48>:0x007fb7bb061d58>):
      7: <h2>All Listings</h2>
      8: <div class="feed">
@@ -7019,7 +7019,7 @@ ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007
     11:   <p><%= link_to l.account.username, account_path(l.account_id) %></p>
     12:   <p><%= l.description %></p>
     13:   <p>-----------------</p>
-  
+
 app/views/welcome/index.html.erb:10:in `block in _app_views_welcome_index_html_erb__4527923774968477274_70213546760100'
 app/views/welcome/index.html.erb:9:in `_app_views_welcome_index_html_erb__4527923774968477274_70213546760100'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -7239,16 +7239,16 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 218ms (ActiveRecord: 11.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `logged_in?' for #<#<Class:0x007f88ada29828>:0x007f88ada1aa58>
 Did you mean?  logger?):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => "logout" if logged_in? %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112502796760'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7272,17 +7272,17 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 58ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial welcome/_logout, application/_logout with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/ben/Development/code/bizaar/app/views"
 ):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => "logout" if session[:account_id] != nil %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112501696120'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7306,17 +7306,17 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial welcome/_logout, application/_logout with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/ben/Development/code/bizaar/app/views"
 ):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => "logout" if session[:account_id] != nil %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112457000920'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7340,17 +7340,17 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.1ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial application/_logout with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/ben/Development/code/bizaar/app/views"
 ):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => "application/logout" if session[:account_id] != nil %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112457709040'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7374,17 +7374,17 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 40ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial application/_logout with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/ben/Development/code/bizaar/app/views"
 ):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => "application/logout" if session[:account_id] != nil %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112466266360'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7408,17 +7408,17 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial application/_logout with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/ben/Development/code/bizaar/app/views"
 ):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => 'application/logout' if session[:account_id] != nil %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112504470320'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7442,17 +7442,17 @@ Processing by WelcomeController#index as HTML
 Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (Missing partial application/_logout with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
   * "/Users/ben/Development/code/bizaar/app/views"
 ):
     11:   <body>
     12:     <%= yield %>
-    13: 
+    13:
     14:     <%= render :partial => 'application/logout' if session[:account_id] != nil %>
     15:   </body>
     16: </html>
-  
+
 app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb__1894232973980542699_70112504448620'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7478,9 +7478,9 @@ Completed 200 OK in 43ms (Views: 39.0ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/logout" for ::1 at 2017-03-12 19:17:52 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -7553,9 +7553,9 @@ Completed 200 OK in 37ms (Views: 32.7ms | ActiveRecord: 1.1ms)
 
 
 Started GET "/logout" for ::1 at 2017-03-12 19:18:23 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -7621,9 +7621,9 @@ Completed 200 OK in 41ms (Views: 36.6ms | ActiveRecord: 1.4ms)
 
 
 Started GET "/logout" for ::1 at 2017-03-12 19:19:09 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -7659,9 +7659,9 @@ puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (110.8ms)
 Started GET "/logout" for ::1 at 2017-03-12 19:20:17 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/logout"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -8002,8 +8002,6 @@ Processing by SessionsController#new as HTML
   Rendering sessions/new.html.erb within layouts/application
   Rendered sessions/new.html.erb within layouts/application (3.1ms)
 Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.0ms)
->>>>>>> dashboard-ben
-
 
 Started GET "/" for ::1 at 2017-03-13 10:00:09 -0400
   [1m[36mActiveRecord::SchemaMigration Load (2.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -8065,9 +8063,9 @@ Completed 200 OK in 72ms (Views: 38.7ms | ActiveRecord: 5.9ms)
 
 
 Started GET "/1" for ::1 at 2017-03-13 10:14:00 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/1"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -8509,14 +8507,14 @@ Processing by ListingsController#edit as HTML
 Completed 500 Internal Server Error in 164ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fa9cdc67ae0>:0x007fa9c9c27e30>
 Did you mean?  listings_path):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.submit %>
-  
+
 app/views/listings/edit.html.erb:1:in `_app_views_listings_edit_html_erb___4322138945550117779_70183597352080'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -8551,14 +8549,14 @@ Processing by ListingsController#edit as HTML
 Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007fa9cdc67ae0>:0x007fa9cda5b3f0>
 Did you mean?  listings_path):
     1: <%= form_for @listing do |f| %>
     2: 	<%= f.text_field :name %>
     3: 	<%= f.text_field :description %>
     4: 	<%= f.submit %>
-  
+
 app/views/listings/edit.html.erb:1:in `_app_views_listings_edit_html_erb___4322138945550117779_70183638195980'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -8569,9 +8567,9 @@ app/views/listings/edit.html.erb:1:in `_app_views_listings_edit_html_erb___43221
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (87.8ms)
 Started GET "/signup" for ::1 at 2017-03-13 10:24:14 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signup"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -8837,10 +8835,32 @@ Completed 200 OK in 40ms (Views: 36.6ms | ActiveRecord: 1.3ms)
 
 
 Started GET "/signup" for ::1 at 2017-03-13 10:30:18 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signup"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+=======
+Started GET "/" for ::1 at 2017-03-13 09:50:00 -0400
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+
+activerecord (5.0.2) lib/active_record/migration.rb:573:in `check_pending!'
+activerecord (5.0.2) lib/active_record/migration.rb:549:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+>>>>>>> 71550b3ba6ad5d01c01cbe645ff621ed85dc9929
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
 web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
@@ -8866,6 +8886,7 @@ puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
 puma (3.8.1) lib/puma/server.rb:425:in `process_client'
 puma (3.8.1) lib/puma/server.rb:289:in `block in run'
 puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+<<<<<<< HEAD
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
   Rendered /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
@@ -8963,9 +8984,9 @@ Processing by AccountsController#show as HTML
 Completed 404 Not Found in 11ms (ActiveRecord: 4.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=neq):
-  
+
 app/controllers/accounts_controller.rb:19:in `show'
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/ben/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -9024,9 +9045,9 @@ Completed 200 OK in 55ms (Views: 44.0ms | ActiveRecord: 7.4ms)
 
 
 Started GET "/signup" for ::1 at 2017-03-13 10:32:09 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/signup"):
-  
+
 actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -9127,3 +9148,38 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.0ms)
 
 
+=======
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (125.8ms)
+  [1m[35m (15.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (20.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3635140120778133240);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateAccounts (20170310153237)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE TABLE "accounts" ("id" serial primary key, "username" character varying, "password_digest" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170310153237"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateListings (20170310214520)
+  [1m[35m (5.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "listings" ("id" serial primary key, "name" character varying, "description" character varying, "account_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170310214520"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateBids (20170311214125)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.1ms)[0m  [1m[35mCREATE TABLE "bids" ("id" serial primary key, "buyer_listing_id" integer, "seller_listing_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170311214125"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-03-13 13:50:12 UTC], ["updated_at", 2017-03-13 13:50:12 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3635140120778133240)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+>>>>>>> 71550b3ba6ad5d01c01cbe645ff621ed85dc9929

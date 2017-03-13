@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :bids
   resources :accounts do
-  	resources :listings
+  	resources :listings, only: [:create, :new, :edit, :show, :update, :delete]
   end
   # get '/accounts/:id/listings/:id/bids/', to: 'bids#new'
 
