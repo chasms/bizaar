@@ -20,9 +20,8 @@ class ListingsController < ApplicationController
 	end
 
 	def show
-		@account = Account.find(params[:account_id])
-    @bids = Bid.where(buyer_listing_id: @listing.id)
-    @bid = Bid.new
+    	@bids = Bid.where(seller_listing_id: @listing.id)
+    	@bid = Bid.new
 	end
 
 	def index
@@ -66,7 +65,8 @@ class ListingsController < ApplicationController
 		end
 
 		def find_account
-			@account = Account.find(params[:account_id])
+
+		  @account = Account.find(@listing.account_id)
 		end
 
 		def find_user
