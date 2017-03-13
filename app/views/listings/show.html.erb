@@ -4,13 +4,17 @@
 
 <% unless @account == @user %>
   <%= form_for @bid do |f| %>
-    <select>
+    <select name="bid[buyer_listing_id]">
       <% @user.listings.each do |listing| %>
 
       <option value="<%= listing.id %>"><%= listing.name %></option>
       <%end%>
     </select>
-
+	<%= f.hidden_field :seller_listing_id, :value => @listing.id %>
   	<%= f.submit "Bid" %>
   <% end %>
+<% end %>
+
+<% @bids.each do |bid| %>
+	<%= @bid.seller_listing_id %>
 <% end %>

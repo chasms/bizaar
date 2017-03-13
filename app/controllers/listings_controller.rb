@@ -5,6 +5,7 @@ class ListingsController < ApplicationController
 	skip_before_action :find_account, only: [:index]
 	def new
 		@listing = Listing.new
+    	@bid = Bid.new
 	end
 
 	def create
@@ -20,8 +21,9 @@ class ListingsController < ApplicationController
 	def show
 		@account = Account.find(params[:account_id])
 		@user = Account.find(session[:account_id])
-    @bid = Bid.new
+    	@bid = Bid.new
 		@listing = Listing.find(params[:id])
+    	@bids = Bid.where(buyer_listing_id: @listing.id)		
 	end
 
 	def index
