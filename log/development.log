@@ -8083,3 +8083,809 @@ Migrating to CreateBids (20170311214125)
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3635140120778133240)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-03-13 10:03:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 21ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-13 10:03:07 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 1085ms (Views: 1044.1ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/accounts/new" for ::1 at 2017-03-13 10:03:22 -0400
+Processing by AccountsController#new as HTML
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 44ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2017-03-13 10:04:02 -0400
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZCCcB5+hFIWKK4i+gBKgWBeEBT5iFkTELYmVARGvDvARe238nTY1HvbcCeShq4uIcowM/9MD4oLVaUxCRGHH2g==", "account"=>{"username"=>"chasms", "email"=>"chasms@chas.ms", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "chasms@chas.ms"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "chasms"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "chasms"], ["password_digest", "$2a$10$WViupqqMgQ4CiHmjBWjMwur4jGhR1cW3wGrEFNk66xQDLgSzIZy9q"], ["email", "chasms@chas.ms"], ["created_at", 2017-03-13 14:04:02 UTC], ["updated_at", 2017-03-13 14:04:02 UTC]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1
+Completed 302 Found in 107ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/accounts/1" for ::1 at 2017-03-13 10:04:02 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (6.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mListing Load (1.0ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."account_id" = $1[0m  [["account_id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_logout.html.erb (1.8ms)
+Completed 200 OK in 97ms (Views: 47.9ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/accounts/1/listings/new" for ::1 at 2017-03-13 10:04:06 -0400
+Processing by ListingsController#new as HTML
+  Parameters: {"account_id"=>"1"}
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_logout.html.erb (1.0ms)
+Completed 200 OK in 59ms (Views: 45.4ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/accounts/1/listings" for ::1 at 2017-03-13 10:05:18 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sHldC6vsK2UDVGFpANeS7n+Cxu6qOrHL/7swrz8L/pLFIqzwqXsK/n+j4DMhbrk+GorPLxsvF40HW+nsasU3uA==", "listing"=>{"name"=>"butts", "description"=>"they're sooo good", "account_id"=>"1"}, "commit"=>"Create Listing", "account_id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "butts"], ["description", "they're sooo good"], ["account_id", 1], ["created_at", 2017-03-13 14:05:18 UTC], ["updated_at", 2017-03-13 14:05:18 UTC]]
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 68ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 10:05:18 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_logout.html.erb (1.4ms)
+Completed 200 OK in 76ms (Views: 38.8ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 10:30:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (162.0ms)
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 19.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007f8945d41630>:0x007f89449c9698>
+Did you mean?  listings_path):
+     5: <% if @account == @user %>
+     6: 
+     7: <%= link_to "Edit Listing", edit_account_listing_path %>
+     8: <%= link_to "Delete Listing", @listing, method: :delete, data: {confirm: "You sure?"} %>
+     9: 
+    10: 
+    11: <% else %>
+  
+app/views/listings/show.html.erb:8:in `_app_views_listings_show_html_erb__2013487714456001222_70113779389800'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (101.5ms)
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 10:32:00 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (1.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_logout.html.erb (2.0ms)
+Completed 200 OK in 340ms (Views: 329.7ms | ActiveRecord: 2.9ms)
+
+
+Started DELETE "/accounts/1/listings/1" for ::1 at 2017-03-13 10:32:04 -0400
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4CMI1HcOF0++s4Cjh8cTWyPnbiZ++6BxhD06cKoZztqVePkvdZk21MJEAfmmfjiLRu9n58/uBjd83eMz/9cH8A==", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+No template found for ListingsController#destroy, rendering head :no_content
+Completed 204 No Content in 98ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 10:32:07 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (162.6ms)
+Completed 500 Internal Server Error in 180ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `listing_path' for #<#<Class:0x007f8945d41630>:0x007f8948f03600>
+Did you mean?  listings_path):
+    1: <%= form_for @listing do |f| %>
+    2: 	<%= f.text_field :name %>
+    3: 	<%= f.text_field :description %>
+    4: 	<%= f.submit %>
+  
+app/views/listings/edit.html.erb:1:in `_app_views_listings_edit_html_erb___114579387369613572_70113776141280'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (99.2ms)
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 10:32:43 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_logout.html.erb (1.1ms)
+Completed 200 OK in 59ms (Views: 51.3ms | ActiveRecord: 2.5ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 10:32:55 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IaofuLgnxVXWud5axBcHLpHxbxN4XwSJ0G9UxC0UJhNU8e5DurDkzqpOXwDlriz+9Plm0slKos8oj42HeNrvOQ==", "listing"=>{"name"=>"drugs and baseball bats", "description"=>"they're sooo good"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (1.1ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+No template found for ListingsController#update, rendering head :no_content
+Completed 204 No Content in 111ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 11:05:53 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_logout.html.erb (2.0ms)
+Completed 200 OK in 102ms (Views: 66.0ms | ActiveRecord: 1.7ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:07:40 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dldR1GPEHIkDuZPDVCqUnQA371xuYHEVbOH+if9HNwMDDKAvYVM9En9OEpl1k79NZT/mnd9111OUASfKqon+KQ==", "listing"=>{"name"=>"butts", "description"=>"they're sooo good"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 12.1ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/listings_controller.rb:40:in `update'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.3ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (104.2ms)
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:09 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dldR1GPEHIkDuZPDVCqUnQA371xuYHEVbOH+if9HNwMDDKAvYVM9En9OEpl1k79NZT/mnd9111OUASfKqon+KQ==", "listing"=>{"name"=>"butts", "description"=>"they're sooo good"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 44ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:09 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_logout.html.erb (1.6ms)
+Completed 200 OK in 68ms (Views: 34.2ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 11:08:17 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_logout.html.erb (1.4ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:18 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HabYKyt6uRIWCs9oK4VLizuGae5wT9bBCm6lT4uBuV1o/SnQKe2YiWr9TjIKPGBbXo5gL8FacIfyjnwM3k9wdw==", "listing"=>{"name"=>"butts", "description"=>"they're sooo good"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 9ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:18 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_logout.html.erb (1.2ms)
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 11:08:20 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_logout.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 33.2ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:29 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+1Fw3QU34z9k9I3/wjduyi8rYlj6j4oFFqVWuCPXh3COCoEmB6DCpBgDDKXjjkUaSiNrmUuaLEPuRY/7dhlOWg==", "listing"=>{"name"=>"knee camps", "description"=>"they're sooo good"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "listings" SET "name" = $1, "updated_at" = $2 WHERE "listings"."id" = $3[0m  [["name", "knee camps"], ["updated_at", 2017-03-13 15:08:29 UTC], ["id", 1]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:29 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (1.2ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_logout.html.erb (1.6ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 11:08:31 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_logout.html.erb (1.3ms)
+Completed 200 OK in 41ms (Views: 34.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:41 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hWBxFaZWevNCbY8YX1/lW+5JEnR+v7w6mJB7UJcMasTwO4DupMFbaD6aDkJ+5s6Li0Ebtc+qGnxgcKITwsKj7g==", "listing"=>{"name"=>"knee camps", "description"=>"they're sooo fantatstisnodfkldfgic"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "listings" SET "description" = $1, "updated_at" = $2 WHERE "listings"."id" = $3[0m  [["description", "they're sooo fantatstisnodfkldfgic"], ["updated_at", 2017-03-13 15:08:41 UTC], ["id", 1]]
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 16ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:41 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_logout.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 49.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 11:08:44 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_logout.html.erb (1.4ms)
+Completed 200 OK in 41ms (Views: 34.0ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:08:48 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NRERnYOmfzSXOuuXB6bQREaSO+/isGfWAdT73qt9h7pASuBmgTFer+vNas0mH/uUI5oyLlOlwZD5NCKd/rNOkA==", "listing"=>{"name"=>"knee camps", "description"=>""}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_logout.html.erb (1.6ms)
+Completed 200 OK in 46ms (Views: 38.6ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:11:30 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7n6NSJYO+6+zjgGck8XWDaq1l1sI//5rpUOfnuuTzaCbJXyzlJnaNM95gMayfP3dz72emrnqWC1do0bdvl0Eig==", "listing"=>{"name"=>"knee camps", "description"=>"hammer time"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "listings" SET "description" = $1, "updated_at" = $2 WHERE "listings"."id" = $3[0m  [["description", "hammer time"], ["updated_at", 2017-03-13 15:11:30 UTC], ["id", 1]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 15ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:11:30 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_logout.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 45.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/accounts/1/listings/1/edit" for ::1 at 2017-03-13 11:11:32 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_logout.html.erb (2.0ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:11:36 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9biE2KYzAzdD4Ssmo9Xid56ojf/kqNtIdHE9aygXFPmA43UjpKQirD8WqnyCbMmn+6CEPlW9fQ6MkeQofdnd0w==", "listing"=>{"name"=>"knee camps", "description"=>""}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_logout.html.erb (1.5ms)
+Completed 200 OK in 45ms (Views: 36.2ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/accounts/1/listings/1" for ::1 at 2017-03-13 11:11:45 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pqXsXn+O7FoKLTrTDhZMyY4XB4m1xk80EfMCqkhhvLPT/h2lfRnNwXbau4kvr2cZ6x8OSATT6XLpE9vpHa91mQ==", "listing"=>{"name"=>"knee camps", "description"=>"hammer time"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/1
+Completed 302 Found in 11ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:11:45 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_logout.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 36.4ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/accounts/1/listings/1" for ::1 at 2017-03-13 11:11:56 -0400
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uZUReEw5xWFgIGmBNPUKV2fQU3uTXAwLjg3t2OFZqOLMzuCDTq7k+hzX6NsVTCGHAthauiJJqk127TSbtJdhyA==", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.7ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+DEPRECATION WARNING: You are passing an instance of ActiveRecord::Base to `find`. Please pass the id of the object by calling `.id`. (called from destroy at /Users/charles/.atom/.learn-ide/home/chasms-38350/code/bizaar/app/controllers/listings_controller.rb:51)
+  [1m[36mListing Load (0.8ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 1]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 8.4ms)
+
+
+  
+NameError (undefined local variable or method `root' for #<ListingsController:0x007f8945e49f78>):
+  
+app/controllers/listings_controller.rb:52:in `destroy'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (182.1ms)
+Started DELETE "/accounts/1/listings/1" for ::1 at 2017-03-13 11:14:32 -0400
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"uZUReEw5xWFgIGmBNPUKV2fQU3uTXAwLjg3t2OFZqOLMzuCDTq7k+hzX6NsVTCGHAthauiJJqk127TSbtJdhyA==", "account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Listing with 'id'=1):
+  
+app/controllers/listings_controller.rb:62:in `find_listing'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.0ms)
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:14:50 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Listing with 'id'=1):
+  
+app/controllers/listings_controller.rb:62:in `find_listing'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (58.9ms)
+Started GET "/accounts/1/listings" for ::1 at 2017-03-13 11:14:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/accounts/1/listings"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.1) lib/puma/configuration.rb:224:in `call'
+puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
+puma (3.8.1) lib/puma/server.rb:425:in `process_client'
+puma (3.8.1) lib/puma/server.rb:289:in `block in run'
+puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+Started GET "/accounts/1/listings" for ::1 at 2017-03-13 11:14:50 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/accounts/1/listings"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.1) lib/puma/configuration.rb:224:in `call'
+puma (3.8.1) lib/puma/server.rb:590:in `handle_request'
+puma (3.8.1) lib/puma/server.rb:425:in `process_client'
+puma (3.8.1) lib/puma/server.rb:289:in `block in run'
+puma (3.8.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (251.5ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [28 times] (20.9ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [28 times] (36.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (80.9ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (427.8ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (304.3ms)
+Started GET "/accounts/1/listings/1" for ::1 at 2017-03-13 11:15:24 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"1"}
+  [1m[36mListing Load (0.4ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Listing with 'id'=1):
+  
+app/controllers/listings_controller.rb:62:in `find_listing'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.8ms)
+Started GET "/accounts/1" for ::1 at 2017-03-13 11:15:25 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/accounts/1" for ::1 at 2017-03-13 11:15:25 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mListing Load (0.9ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."account_id" = $1[0m  [["account_id", 1]]
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."account_id" = $1[0m  [["account_id", 1]]
+  Rendered accounts/show.html.erb within layouts/application (3.5ms)
+  Rendered accounts/show.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_logout.html.erb (1.7ms)
+  Rendered layouts/_logout.html.erb (0.8ms)
+Completed 200 OK in 133ms (Views: 83.2ms | ActiveRecord: 1.3ms)
+
+
+Completed 200 OK in 90ms (Views: 80.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/accounts/1/listings/new" for ::1 at 2017-03-13 11:15:57 -0400
+Processing by ListingsController#new as HTML
+  Parameters: {"account_id"=>"1"}
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_logout.html.erb (1.8ms)
+Completed 200 OK in 79ms (Views: 53.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/accounts/1/listings" for ::1 at 2017-03-13 11:16:06 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iJS601dszcokEOXJXFZZ0IkqoP8cvX++Vhx4KaXdKP/9z0soVfvsUVjnZJN973IA7CKpPq2o2fiu/KFq8BPh1Q==", "listing"=>{"name"=>"knee camps", "description"=>"", "account_id"=>"1"}, "commit"=>"Create Listing", "account_id"=>"1"}
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_logout.html.erb (1.5ms)
+Completed 200 OK in 51ms (Views: 40.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/accounts/1/listings" for ::1 at 2017-03-13 11:16:21 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WpwBpUM4BMCVnZLlgoIpCMhu6nkDVtVDIYBMhYtzragvx/BeQa8lW+lqE7+jOwLYrWbjuLJDcwXZYJXG3r1kgg==", "listing"=>{"name"=>"", "description"=>"hammer time", "account_id"=>"1"}, "commit"=>"Create Listing", "account_id"=>"1"}
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/new.html.erb within layouts/application
+  Rendered listings/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_logout.html.erb (1.2ms)
+Completed 200 OK in 45ms (Views: 38.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/accounts/1/listings" for ::1 at 2017-03-13 11:16:26 -0400
+Processing by ListingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7lE2MIMr1US8FpiCzoIOoOqYSYWgnO6DLU1X9BfrUm6bCsfLgbz038DhGdjvOyVwj5BARBGJSMXVrY63QiWbRA==", "listing"=>{"name"=>"knee camps", "description"=>"hammer time", "account_id"=>"1"}, "commit"=>"Create Listing", "account_id"=>"1"}
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "knee camps"], ["description", "hammer time"], ["account_id", 1], ["created_at", 2017-03-13 15:16:26 UTC], ["updated_at", 2017-03-13 15:16:26 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/2
+Completed 302 Found in 15ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/accounts/1/listings/2" for ::1 at 2017-03-13 11:16:26 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"2"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_logout.html.erb (1.3ms)
+Completed 200 OK in 83ms (Views: 48.8ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/accounts/1/listings/2/edit" for ::1 at 2017-03-13 11:16:30 -0400
+Processing by ListingsController#edit as HTML
+  Parameters: {"account_id"=>"1", "id"=>"2"}
+  [1m[36mListing Load (0.3ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_logout.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/accounts/1/listings/2" for ::1 at 2017-03-13 11:16:39 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EFNipk9Cm4tRWooXC0CeQUAdcYtP/njqWKWFqoFVg0FlCJNdTdW6EC2tC00q+bWRJRV4Sv7r3qygRVzp1JtKaw==", "listing"=>{"name"=>"", "description"=>"hammer time"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"2"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering listings/edit.html.erb within layouts/application
+  Rendered listings/edit.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_logout.html.erb (1.4ms)
+Completed 200 OK in 41ms (Views: 33.6ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/accounts/1/listings/2" for ::1 at 2017-03-13 11:17:31 -0400
+Processing by ListingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wJCQuWGgUpM8BLBwww5qYSbqLMd9QezNXz3AtOfNoVu1y2FCYzdzCEDzMSrit0GxQ+IlBsxUSoun3Rn3sgNocQ==", "listing"=>{"name"=>"knee caps", "description"=>"hammer time"}, "commit"=>"Update Listing", "account_id"=>"1", "id"=>"2"}
+  [1m[36mListing Load (0.6ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "listings" SET "name" = $1, "updated_at" = $2 WHERE "listings"."id" = $3[0m  [["name", "knee caps"], ["updated_at", 2017-03-13 15:17:31 UTC], ["id", 2]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/1/listings/2
+Completed 302 Found in 15ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/accounts/1/listings/2" for ::1 at 2017-03-13 11:17:31 -0400
+Processing by ListingsController#show as HTML
+  Parameters: {"account_id"=>"1", "id"=>"2"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering listings/show.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered listings/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_logout.html.erb (1.3ms)
+Completed 200 OK in 54ms (Views: 45.7ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/accounts/1/listings/2" for ::1 at 2017-03-13 11:17:37 -0400
+Processing by ListingsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"BbO+bC2Y89aA6eqOaUdOe2z8w2gme8fHCacW9mop5hBw6E+XLw/STfwea9RI/mWrCfTKqZduYYHxR8+1P+cvOg==", "account_id"=>"1", "id"=>"2"}
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT  "listings".* FROM "listings" WHERE "listings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "listings" WHERE "listings"."id" = $1[0m  [["id", 2]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/" for ::1 at 2017-03-13 11:17:37 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (0.5ms)[0m  [1m[34mSELECT "listings".* FROM "listings"[0m
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_logout.html.erb (1.1ms)
+Completed 200 OK in 46ms (Views: 36.7ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (209.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bizaar_development"[0m
+  [1m[35m (186.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "bizaar_test"[0m
