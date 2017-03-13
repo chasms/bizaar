@@ -45,7 +45,17 @@ Account.create([
     username: "Russell",
     email: "russell@blacksmith.state.ma.us",
     password: "blacksmith"
-  }
+  },
+  {
+    username: "Leah",
+    email: "leah@hailswebzine.com",
+    password: "iamnorwegian"
+  },
+  {
+    username: "Barack Obama",
+    email: "barryhusseinsoetoro@kenya.ke",
+    password: "allahuakbar"
+  },
 ])
 
 Listing.create([
@@ -143,5 +153,20 @@ Listing.create([
     name: "Paneer",
     description: "A sweet fat kitty.",
     account_id: 8
+  },
+  {
+    name: "Guns",
+    description: "My 2nd Amendment rights.",
+    account_id: 9
+  },
+  {
+    name: "Murderer husband",
+    description: "He killed a bunch of people.",
+    account_id: 9
+  },
+  {
+    name: "Nothing",
+    description: "All your liberty are belong to me.",
+    account_id: 10
   },
 ])
