@@ -1,8 +1,14 @@
 <div class="new_listing"><%= link_to "Create a new listing!", new_account_listing_path(@account.id) %></div>
 
+
 <h2><%= @account.username %>'s Listings</h2>
 <%= image_tag @account.avatar.url(:medium) %>
 
+
+<br>
+
+<h2><%= @account.username %>'s listings</h2>
+>>>>>>> account_bids_feature
 <div class="feed">
 
   <% @listings.each do |l| %>
@@ -19,4 +25,23 @@
 
 <br>
 
-<!-- show all bids where seller_listing_id matches any listings for this account_id  -->
+
+<h3>Bids:</h3>
+<div id="account_bids">
+  <table class= "table ">
+  <th> Listing</th>
+  <th> Offer</th>
+  <% @bids.each do |bid| %>
+      <tr>
+        <td>
+        <% listing=Listing.find(bid.seller_listing_id)%>
+        <%= listing.name%>
+        </td>
+        <td>
+        <% offer= Listing.find(bid.buyer_listing_id)%>
+        <%= offer.name%>
+        </td>
+      </tr>
+      <%end%>
+</div>
+    </table>
