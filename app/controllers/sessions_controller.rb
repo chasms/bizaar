@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
 private
 
   def logged_out?
-    session[:name] == nil
+    session[:account_id] == nil
   end
 end
