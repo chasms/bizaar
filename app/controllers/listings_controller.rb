@@ -1,12 +1,13 @@
 class ListingsController < ApplicationController
 	before_action :find_listing, only: [:show, :edit, :update, :destroy]
-	before_action :find_account
+	before_action :find_account, except: [:new, :index]
 	before_action :find_user
-	skip_before_action :find_account, only: [:index]
+
 
 	def new
 		@listing = Listing.new
     	@bid = Bid.new
+
 	end
 
 	def create
