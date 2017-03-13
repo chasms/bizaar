@@ -2,7 +2,13 @@
 <p>Description: <%= @listing.description %></p>
 <p>Seller: <%= @listing.account.username %></p>
 
-<% unless @account == @user %>
+<% if @account == @user %>
+
+<%= link_to "Edit Listing", edit_account_listing_path %>
+<%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"} %>
+
+
+<% else %>
   <%= form_for @bid do |f| %>
     <select name="bid[buyer_listing_id]">
       <% @user.listings.each do |listing| %>
