@@ -1,14 +1,6 @@
-<% if @account.errors.any? %>
+<% if @account == nil %>
+  <% @account = Account.new %>
   <div id="error_explanation">
-    <h2>
-      <%= pluralize(@account.errors.count, "error") %>
-      You couldn't be logged in because:
-    </h2>
-
-    <ul>
-    <% @account.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
+    <h5>No accounts match that username/password combination.</h5>
   </div>
 <% end %>

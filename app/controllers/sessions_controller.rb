@@ -6,9 +6,12 @@ class SessionsController < ApplicationController
 
   def create
     @account = Account.find_by(username: params[:account][:username])
-    return head(:forbidden) unless @account.try(:authenticate, params[:account][:password])
-    session[:account_id] = @account.id
-    redirect_to '/'
+    if @account.try(:authenticate, params[:account][:password])
+      session[:account_id] = @account.id
+      redirect_to '/'
+    else
+      render :new
+    end
   end
 
   def destroy
