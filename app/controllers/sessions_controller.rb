@@ -5,21 +5,18 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @account = Account.find_by(account_params(:username))
-    return head(:forbidden) unless @account.authenticate(account_params(:password))
-    session[:user_id] = @account.id
+    @account = Account.find_by(username: params[:account][:username])
+    return head(:forbidden) unless @account.try(:authenticate, params[:account][:password])
+    session[:account_id] = @account.id
+    redirect_to '/'
   end
 
   def destroy
     session.clear
-    redirect_to '/'
+    redirect_to login_path
   end
 
 private
-
-  def account_params(*args)
-    params.require(:account).permit(*args)
-  end
 
   def logged_out?
     session[:name] == nil

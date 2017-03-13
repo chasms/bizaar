@@ -1,6 +1,4 @@
 class AccountsController < ApplicationController
-  before_action :set_account, only: [:show]
-
   def new
     @account = Account.new
   end
@@ -16,16 +14,21 @@ class AccountsController < ApplicationController
   end
 
   def show
-
+    if logged_in?
+      @account = Account.find(params[:id])
+      @listings = @account.listings.all
+    else
+      redirect_to login_path
+    end
   end
 
   private
 
-      def set_account
-        @account = Account.find(params[:id])
-      end
+  def account_params(*args)
+    params.require(:account).permit(*args)
+  end
 
-      def account_params(*args)
-        params.require(:account).permit(*args)
-      end
+  def logged_in?
+    session[:account_id] != nil
+  end
 end
