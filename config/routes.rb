@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   # get '/accounts/:id/listings/:id/bids/', to: 'bids#new'
 
-
+  post '/listings', to: "listings#create"
   get '/login', to: 'sessions#new'
   get '/listings', to: 'listings#index'
 
