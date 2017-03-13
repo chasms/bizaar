@@ -27,7 +27,6 @@ class ListingsController < ApplicationController
 
 	def index
 		@listings= Listing.search(params[:search])
-
 	end
 
 	def edit
@@ -63,7 +62,7 @@ class ListingsController < ApplicationController
 
 		def find_listing
 
-			@listing = Listing.where(id: params[:id])[0]	
+			@listing = Listing.where(id: params[:id])[0]
 			unless @listing
 			 	redirect_to root_path
 			end
