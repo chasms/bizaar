@@ -1,5 +1,6 @@
 class Listing < ApplicationRecord
 	belongs_to :account
+	has_many :bids
 	validates :name, presence: true
 	validates :description, presence: true
 

@@ -6,6 +6,7 @@ class BidsController < ApplicationController
   end
 
   def create
+    byebug
     @bid = Bid.create( bid_params )
    	@listing = Listing.find( params[:bid][:seller_listing_id] )
 

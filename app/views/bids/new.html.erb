@@ -3,8 +3,11 @@
     <% @user.listings.each do |listing| %>
 
     <option value="<%= listing.id %>"><%= listing.name %></option>
+
     <%end%>
   </select>
+
+
 
 	<%= f.submit "Bid" %>
 <% end %>
