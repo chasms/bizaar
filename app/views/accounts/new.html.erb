@@ -1,26 +1,5 @@
 <h1>Create an Account!</h1>
-<%= render 'errors' %>
 
-<%= form_for @account do |f| %>
-  <div class="field_with_errors">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field_with_errors">
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field_with_errors">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="avatar">
-    <%= f.label :avatar %>
-    <%= f.file_field :avatar %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= render 'form' %>
 
-  <p>Already have an account? <%= link_to 'Log In!', login_path %></p>
-<% end %>
+<p>Already have an account? <%= link_to 'Log In!', login_path %></p>
