@@ -62,7 +62,6 @@ class ListingsController < ApplicationController
 		
 		@buyer_listing 		= Listing.find_by(id: params[:buyer_listing_id])
 		@buyer 				= Listing.find(params[:buyer_listing_id]).account.id
-
 		
 		@buyer_listing.update(account_id: @seller)
 		@seller_listing.update(account_id: @buyer)		

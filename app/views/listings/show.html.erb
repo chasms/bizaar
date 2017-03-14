@@ -23,8 +23,8 @@
 <% end %>
 
 <% @bids.each do |bid| %>
+
   <p>
-  
     <%= Listing.find(bid.buyer_listing_id).account.username + " offers " + Listing.find(bid.buyer_listing_id).name %>
     in exchange for <%= Listing.find(bid.seller_listing_id).name %>
    
@@ -35,6 +35,5 @@
         <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit" %>
       <% end %>
     <% end %>
-
   </p>
 <% end %>
