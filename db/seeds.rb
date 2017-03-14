@@ -43,7 +43,7 @@ Account.create([
   },
   {
     username: "Russell",
-    email: "russell@blacksmith.state.ma.us",
+    email: "blacksmith@state.ma.us",
     password: "blacksmith"
   },
   {
