@@ -35,10 +35,10 @@ class AccountsController < ApplicationController
 
 	def update
 		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
+			redirect_to account_path(@account)
 		end
-		if @listing.update(listing_params(:name, :description, :photo))
-			redirect_to account_listing_path(@account, @listing)
+		if @account.update(account_params(:username, :email, :password, :avatar))
+			redirect_to account_path(@account)
 		else
 			render :edit
 		end
