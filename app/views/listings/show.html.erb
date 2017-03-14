@@ -29,7 +29,7 @@
     in exchange for <%= Listing.find(bid.seller_listing_id).name %>
    
     <% if session[:account_id] == Listing.find(bid.seller_listing_id).account_id %>
-      <%= form_tag '/accept_offer', method: 'post', action: "accept_offer", do %> 
+      <%= form_tag '/accept_offer', method: 'post', action: "accept_offer" do %> 
        <input type="hidden" name="seller_listing_id" value="<%= bid.seller_listing_id%>" >
        <input type="hidden" name="buyer_listing_id" value="<%= bid.buyer_listing_id %>" >
         <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit" %>
