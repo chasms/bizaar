@@ -18,8 +18,7 @@ class AccountsController < ApplicationController
     if logged_in?
       @account = Account.find(params[:id])
       @listings = @account.listings.all.order(created_at: :desc)
-      byebug
-      @bids =Bid.where('seller_listing_id = ?', @account.id)
+      @bids =Bid.where('seller_id = ?', @account.id)
     else
       redirect_to login_path
     end
@@ -30,5 +29,7 @@ class AccountsController < ApplicationController
   def account_params(*args)
     params.require(:account).permit(*args)
   end
+
+
 
 end

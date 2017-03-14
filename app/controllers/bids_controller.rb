@@ -6,10 +6,10 @@ class BidsController < ApplicationController
   end
 
   def create
-    byebug
-    @bid = Bid.create( bid_params )
+    @bid = Bid.create( bid_params(:buyer_listing_id, :seller_listing_id))
+    @bid.buyer_id= session[:account_id]
    	@listing = Listing.find( params[:bid][:seller_listing_id] )
-
+    @bid.seller_id= @listing.account_id
     if @bid.valid?
    	  @bid.save
     end
@@ -18,7 +18,7 @@ class BidsController < ApplicationController
 
   private
 
-    def bid_params
-	   params.require(:bid).permit(:buyer_listing_id, :seller_listing_id)
+    def bid_params(*args)
+	   params.require(:bid).permit(*args)
     end
 end
