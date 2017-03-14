@@ -1,19 +1,5 @@
 <h1>Log In!</h1>
 
-<%= render 'errors' %>
+<%= render 'login_form' %>
 
-<%= form_for @account, url: login_path, method: :post do |f| %>
-  <div class="field_with_errors">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field_with_errors">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Log In" %>
-  </div>
-
-  <p>New to Bizaar? <%= link_to 'Sign Up!', new_account_path %></p>
-<% end %>
+<p>New to Bizaar? <%= link_to 'Sign Up!', new_account_path %></p>

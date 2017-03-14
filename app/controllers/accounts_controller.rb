@@ -59,7 +59,11 @@ class AccountsController < ApplicationController
     end
 
     def find_user
-      @user = Account.find(session[:account_id])
+      if logged_in?
+        @user = Account.find(session[:account_id])
+      else
+        redirect_to login_path
+      end
     end
 
 end

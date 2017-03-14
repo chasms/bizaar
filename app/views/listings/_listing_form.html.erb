@@ -1,4 +1,4 @@
-<%= render 'errors' %>
+<%= render partial: 'errors', locals: {listing: @listing} %>
 
 <div class="container">
   <%= form_for [account, listing] do |f| %>

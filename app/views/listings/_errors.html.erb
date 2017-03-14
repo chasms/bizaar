@@ -1,12 +1,12 @@
-<% if @listing.errors.any? %>
+<% if listing.errors.any? %>
   <div id="error_explanation">
     <h2>
-      <%= pluralize(@listing.errors.count, "error") %>
+      <%= pluralize(listing.errors.count, "error") %>
       prohibited this listing from being saved:
     </h2>
 
     <ul>
-    <% @listing.errors.full_messages.each do |msg| %>
+    <% listing.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
     <% end %>
     </ul>
