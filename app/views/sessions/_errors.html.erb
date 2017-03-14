@@ -1,0 +1,6 @@
+<% if @account == nil %>
+  <% @account = Account.new %>
+  <div id="error_explanation">
+    <h5>No accounts match that username/password combination.</h5>
+  </div>
+<% end %>
