@@ -14,5 +14,8 @@ Rails.application.routes.draw do
   post 'login', to: 'sessions#create'
   # post 'logout', to: 'sessions#destroy'
   delete 'logout', to: 'sessions#destroy'
+  post '/accept_offer', to: "listings#accept"
+  post '/reject_offer', to: "listings#reject"  
+  post '/modify_offer', to: "listings#modify"    
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
