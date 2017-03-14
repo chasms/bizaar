@@ -1,12 +1,12 @@
 <p>Name: <%= @listing.name %></p>
 <p>Description: <%= @listing.description %></p>
 <p>Seller: <%= @listing.account.username %></p>
+<p><%= image_tag @listing.photo.url(:medium) %></p>
 
 <% if @account == @user %>
 
 <%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-primary" %>
 <%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
-
 
 <% else %>
 

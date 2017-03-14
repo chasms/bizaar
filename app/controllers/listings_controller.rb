@@ -3,15 +3,14 @@ class ListingsController < ApplicationController
 	before_action :find_account, except: [:new, :index, :create]
 	before_action :find_user
 
-
 	def new
 		@listing = Listing.new
-    	@bid = Bid.new
-    	@account = Account.find(session[:account_id])
+    @bid = Bid.new
+    @account = Account.find(session[:account_id])
 	end
 
 	def create
-		@listing = Listing.new(listing_params(:name,:description,:account_id))
+		@listing = Listing.new(listing_params(:name, :description, :account_id, :photo))
 		if @listing.valid?
 			@listing.save
 			redirect_to account_listing_path(@listing.account_id, @listing.id)
@@ -39,7 +38,7 @@ class ListingsController < ApplicationController
 		unless @user == @account
 			redirect_to account_listing_path(@account, @listing)
 		end
-		if @listing.update(listing_params(:name, :description))
+		if @listing.update(listing_params(:name, :description, :photo))
 			redirect_to account_listing_path(@account, @listing)
 		else
 			render :edit

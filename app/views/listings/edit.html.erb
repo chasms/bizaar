@@ -3,5 +3,6 @@
 <%= form_for [@account, @listing] do |f| %>
 	<%= f.text_field :name %>
 	<%= f.text_area :description %>
+	<%= f.file_field :photo %>
 	<%= f.submit class: "btn btn-primary" %>
 <% end %>
