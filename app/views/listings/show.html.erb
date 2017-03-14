@@ -5,7 +5,7 @@
 
 <% if @account == @user %>
 
-<%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-primary" %>
+<%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-warning" %>
 <%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
 
 <% else %>

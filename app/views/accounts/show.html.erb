@@ -1,7 +1,7 @@
-<div class="new_listing"><%= link_to "Create a new listing!", new_account_listing_path(@account.id) %></div>
-
-<% if @user == @account %>
-  <div class="edit_account"><%= link_to "Edit your account", edit_account_path(@account.id) %></div>
+<% if @account == @user %>
+  <%= link_to "New Listing", new_account_listing_path(@account), class: "btn btn-success" %>
+  <%= link_to "Edit Account", edit_account_path(@account), class: "btn btn-warning" %>
+  <%= link_to "Delete Account", account_path(@account), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
 <% end %>
 
 <h2><%= @account.username %>'s Listings</h2>

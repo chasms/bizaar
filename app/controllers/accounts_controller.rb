@@ -44,6 +44,16 @@ class AccountsController < ApplicationController
 		end
 	end
 
+  def destroy
+    unless @user == @account
+      redirect_to account_path(@account)
+    end
+    @account.listings.destroy
+    @account.destroy
+    session.destroy
+    redirect_to root_path
+  end
+
   private
 
     def account_params(*args)
