@@ -6,9 +6,8 @@ class BidsController < ApplicationController
   end
 
   def create
-    @bid = Bid.create( bid_params )
-   	@listing = Listing.find( params[:bid][:seller_listing_id] )
-
+    @bid = Bid.create(bid_params)
+   	@listing = Listing.find(params[:bid][:seller_listing_id])
     if @bid.valid?
    	  @bid.save
     end
@@ -18,6 +17,7 @@ class BidsController < ApplicationController
   private
 
     def bid_params
-	   params.require(:bid).permit(:buyer_listing_id, :seller_listing_id)
+	     params.require(:bid).permit(:buyer_listing_id, :seller_listing_id)
     end
+
 end

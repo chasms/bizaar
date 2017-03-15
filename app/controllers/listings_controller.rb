@@ -1,7 +1,8 @@
 class ListingsController < ApplicationController
 	before_action :find_listing, only: [:show, :edit, :update, :destroy]
-	before_action :find_account, except: [:new, :index, :create]
-	before_action :find_user
+	before_action :find_account, except: [:new, :create]
+	before_action :validate_user, only: [:create, :update, :destroy]
+	before_action :login
 
 	def new
 		@listing = Listing.new
@@ -29,15 +30,9 @@ class ListingsController < ApplicationController
 	end
 
 	def edit
-		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
-		end
 	end
 
 	def update
-		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
-		end
 		if @listing.update(listing_params(:name, :description, :photo))
 			redirect_to account_listing_path(@account, @listing)
 		else
@@ -46,9 +41,7 @@ class ListingsController < ApplicationController
 	end
 
 	def destroy
-		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
-		end
+
 		@listing.destroy
 		redirect_to root_path
 	end
@@ -67,15 +60,14 @@ class ListingsController < ApplicationController
 		end
 
 		def find_account
-			if logged_in?
-				@account = Account.find(@listing.account_id)
-			else
-				redirect_to login_path
-			end
+			@account = Account.find(@listing.account_id)
 		end
 
-		def find_user
-			@user = Account.find(session[:account_id])
+		def validate_user
+			user = Account.where(id: session[:account_id])[0]
+			unless user == @account
+				redirect_to account_listing_path(@account, @listing)
+			end
 		end
 
 end
