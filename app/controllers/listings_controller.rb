@@ -1,6 +1,6 @@
 class ListingsController < ApplicationController
 	before_action :find_listing, only: [:show, :edit, :update, :destroy]
-	before_action :find_account, except: [:new, :create]
+	before_action :find_account, except: [:new, :create, :accept]
 	before_action :validate_user, only: [:create, :update, :destroy]
 	before_action :login
 
@@ -44,6 +44,20 @@ class ListingsController < ApplicationController
 
 		@listing.destroy
 		redirect_to root_path
+	end
+
+	def accept
+
+		@seller_listing = Listing.find_by(id: params[:seller_listing_id])
+		@seller = Listing.find(params[:seller_listing_id]).account.id
+
+		@buyer_listing = Listing.find_by(id: params[:buyer_listing_id])
+		@buyer = Listing.find(params[:buyer_listing_id]).account.id
+
+		@buyer_listing.update(account_id: @seller)
+		@seller_listing.update(account_id: @buyer)
+
+		redirect_to account_listing_path(@seller, @seller_listing)
 	end
 
 	private
