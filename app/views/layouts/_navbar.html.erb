@@ -17,6 +17,7 @@
         <% end %>
       </ul>
 
+      <% if logged_in? %>
       <ul class="nav navbar-nav pull-right">
         <li>
           <a href-"#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Active Bids<span class="caret"></span></a>
@@ -26,6 +27,7 @@
         </li>
         <li style="padding-top:8px;"><span><%= link_to "Add Listing", new_account_listing_path(@user), class: "btn btn-danger" %></span></li>
       </ul>
+      <% end %>
 
     </div>
 

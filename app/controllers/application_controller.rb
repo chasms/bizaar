@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   def login
-    unless logged_in?
+    if logged_in?
+      @user = Account.find(session[:account_id])
+    else
       redirect_to login_path
     end
   end

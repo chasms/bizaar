@@ -1,7 +1,7 @@
 class ListingsController < ApplicationController
 	before_action :find_listing, only: [:show, :edit, :update, :destroy]
-	before_action :find_account, except: [:new, :create, :accept]
-	before_action :validate_user, only: [:create, :update, :destroy]
+	before_action :find_account, except: [:new, :create, :index, :accept]
+	before_action :validate_user, only: [:update, :destroy]
 	before_action :login
 
 	def new
@@ -74,7 +74,11 @@ class ListingsController < ApplicationController
 		end
 
 		def find_account
-			@account = Account.find(@listing.account_id)
+			if @listing
+				@account = Account.find(@listing.account_id)
+			else
+				@account = Account.find(params[:account_id])
+			end
 		end
 
 		def validate_user

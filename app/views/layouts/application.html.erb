@@ -7,14 +7,10 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <% if Account.where(id: session[:account_id])[0] %>
-      <% @user = Account.find(session[:account_id]) %>
-    <% end %>
-
   </head>
 
   <body>
-    <%= render '/layouts/navbar' %>
+    <%= render partial: '/layouts/navbar' , locals: {user: @user} %>
     <%= yield %>
   </body>
 </html>
