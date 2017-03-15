@@ -97,7 +97,7 @@ GEM
       mime-types
       mimemagic (~> 0.3.0)
     pg (0.20.0)
-    puma (3.8.1)
+    puma (3.8.2)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)

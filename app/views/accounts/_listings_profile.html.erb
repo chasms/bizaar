@@ -1,0 +1,12 @@
+<% @listings.each do |listing| %>
+	<div style="padding:10%;">
+		<div class="listing-post-test">
+			<div><%= image_tag listing.photo.url(:medium), class: "prof-list-img"  %></div>
+			<div class="content text-content centerbox">
+				<span class="title">
+					<%= link_to listing.name, account_listing_path(listing.account_id, listing.id) %>
+				</span>
+	        </div>
+	    </div>
+    </div>
+<% end %>

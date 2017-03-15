@@ -16,8 +16,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900|Open+Sans:300,400,600,700|Roboto:100,300,400,500,700');
 
 body{
+  font-family:'Montserrat', 'Open-Sans', 'Roboto';
   background-color:#F9F9F9 !important;
 }
 input:focus, textarea:focus{
@@ -61,6 +63,13 @@ font-size:68px;
 
 .top-section{
 
+}
+.btn-secondary{
+  color:#EB1478 !important;
+  border-color: #EB1478;
+  background-color:rgba(0,0,0,0);
+  color:white;
+  font-weight:600;  
 }
 
 .btn-standard{
@@ -118,7 +127,7 @@ font-size:68px;
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
     order: 2;
-    height:50px;
+    height:47px;
 }
 .home-search-form input[type='text']:focus{
 	border-color:#EB1478;
@@ -140,8 +149,8 @@ btn-theme{
 }
 .home-search-field{
   margin-bottom:-1px;
-  height:47px;
-  line-height:47px;
+  height:45px;
+  line-height:45px;
   margin-right:0;
   padding-right:0;
   border-top-right-radius:0 !important;
@@ -158,9 +167,8 @@ padding-top:20%;
     box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
 }
 
-.user-welcome{
+.user-welcome {
 margin-top:100px;
-padding-top:150px;
 padding-bottom:5%;
 font-family:pacifico;
 font-size:30px;
@@ -235,3 +243,66 @@ border-width:1px;
 .nav-search-field{
 height:30px;border-radius:2px;border-style:solid;border-width:1px;
 }
+
+
+.prof-pic{
+ border-radius:100%;border-width:1px;border-style:solid;border-color:#EB1478; 
+}
+
+.usr-btns{
+padding-left:2px;
+padding-right:2px;
+width:32%;
+font-size:12px  
+}
+
+.centerbox{
+  text-align:center;
+}
+
+.prof-list-img{
+  /*margin-top:15px;
+  width:75px;
+  border-radius:100%;*/
+  width:100%;
+  border-style:solid;
+  border-width:1px;
+  border-color:#E7E7E7;
+}
+
+.listing-post-test {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
+    margin: 0 0 0px;
+
+}
+
+.text-content{
+  padding:10%;
+  padding-bottom:0 !important;
+}
+
+/*
+.post-container {
+  bakground-color:white !important;
+    margin: 20px 20px 0 0;  
+    padding:20px;
+    border: 1px solid #E7E7E7;
+    overflow: auto
+}
+.post-thumb {
+    float: left
+}
+.post-thumb img {
+    display: block
+}
+.post-content {
+    margin-left: 90px
+}
+.post-title {
+    font-weight: bold;
+    font-size: 200%
+}
+*/
