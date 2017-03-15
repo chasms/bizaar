@@ -1,12 +1,12 @@
 <%= form_for @bid do |f| %>
 
-  <select name="bid[buyer_listing_id]">
+  <select name="bid[buyer_listing_id]", class="form-control">
     <% @user.listings.each do |listing| %>
       <option value="<%= listing.id %>"><%= listing.name %></option>
     <%end%>
   </select>
 
   <%= f.hidden_field :seller_listing_id, :value => @listing.id %>
-  <%= f.submit "Bid", id: "bid-submit" %>
+  <%= f.submit "Bid", id: "bid-submit", class: "btn-lrg-standard", style: "margin-top:10px;width:100%;" %>
 
 <% end %>

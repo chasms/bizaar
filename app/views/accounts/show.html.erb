@@ -1,19 +1,20 @@
 <div class="container">  
-
+ 
   <div class="col-md-4">
-    <div class="listing-post" style="text-align:center;">
-      <div><%= image_tag @account.avatar.url(:medium), class: "prof-pic" %></div>
-      <h2><%= @account.username %></h2>
-      <br>
-    </div><br>
-    <% if @account == @user %>
-      <div class="centerbox">
-        <%= link_to "Create Listing", new_account_listing_path(@user), class: "btn btn-secondary usr-btns"  %>
-        <%= link_to "Edit Account", edit_account_path(@user), class: "btn btn-secondary usr-btns" %>
-        <%= link_to "Delete Account", account_path(@user), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-secondary usr-btns" %>
-      </div>
-    <% end %>
+      <div style="margin:auto;background-size:cover;border-top-left-radius:10px;border-top-right-radius:10px;background-image:url(<%= image_url(@account.avatar.url(:medium)) %>); height:250px;margin-top:0;"></div>
+      <div class="listing-post" style="text-align:center;">
+        <h2><%= @account.username %></h2>
+        <br>
+      </div><br>
+      <% if @account == @user %>
+        <div class="centerbox">
+          <%= link_to "Create Listing", new_account_listing_path(@user), class: "btn btn-secondary usr-btns"  %>
+          <%= link_to "Edit Account", edit_account_path(@user), class: "btn btn-secondary usr-btns" %>
+          <%= link_to "Delete Account", account_path(@user), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-secondary usr-btns" %>
+        </div>
+      <% end %>
   </div>
+
   <div class="col-md-4" style="padding-top:20px;">
     <h3 style="text-align:center;"><%= @account.username %>'s listings</h3>
     <div style="overflow-y:scroll; height:400px;padding:10%;">
@@ -55,7 +56,7 @@
             <% @account.seller_bids.each do |bid| %>
               <tr>
                 <td><%= bid.buyer_listing.name %></td>
-                <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_listing) %></td>
+                <td><%= link_to bid.seller_listing.name, account_listing_path(@account, bid.seller_listing) %></td>
               </tr>
             <%end%>
           </table>

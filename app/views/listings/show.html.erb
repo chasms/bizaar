@@ -1,35 +1,43 @@
-<p>Name: <%= @listing.name %></p>
-<p>Description: <%= @listing.description %></p>
-<p>Seller: <%= @listing.account.username %></p>
-<p><%= image_tag @listing.photo.url(:medium) %></p>
-<p>Session ID: <%= session[:account_id] %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 listing-post-list">
+      <h3><%= @listing.name %></h3>    
+      <p><%= image_tag @listing.photo.url(:medium) %></p>
+      <p><%= @listing.description %></p>
+      <p><strong>Listed by <%= link_to @listing.account.username, @listing.account  %></strong></p>
+  </div>
 
-<% if @account == @user %></p>
+  <div class="col-md-6 col-md-offset-3">
+    <div style="padding:20px;">
+      <% if @account == @user %></p>
 
-  <%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-warning" %>
-  <%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
+        <%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-warning" %>
+        <%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
 
-<% else %>
+      <% else %>
 
-  <%= render partial: "make_bid", locals: {user: @user, bid: @bid, listing: @listing} %>
+        <%= render partial: "make_bid", locals: {user: @user, bid: @bid, listing: @listing} %>
 
-<% end %>
-
-<% @bids.each do |bid| %>
-    <p><%= Listing.find(bid.buyer_listing_id).account.username%>offers<span class="offer"> <%=link_to Listing.find(bid.buyer_listing_id).name, account_listing_path(Listing.find(bid.buyer_listing_id).account_id, bid.buyer_listing_id) %></span>
-    in exchange for <span class="request"><%= Listing.find(bid.seller_listing_id).name %></span>
-
-    <% if @user.id == Listing.find(bid.seller_listing_id).account_id %>
-
-      <%= form_tag '/accept_offer', method: 'post', action: "accept_offer" do %>
-        <input type="hidden" name="seller_listing_id" value="<%= bid.seller_listing_id%>" >
-        <input type="hidden" name="buyer_listing_id" value="<%= bid.buyer_listing_id %>" >
-        <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit" %>
-        <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit"%>
       <% end %>
+      <p style="margin-top:20px;font-size:22px;color:black;font-weight:700;text-align:center;">Bids on this item:</p>
+      <% @bids.each do |bid| %>
+          <hr>
+          <p style="text-align:center;padding:5px;"><%= Listing.find(bid.buyer_listing_id).account.username%>offers<span class="offer"> <%=link_to Listing.find(bid.buyer_listing_id).name, account_listing_path(Listing.find(bid.buyer_listing_id).account_id, bid.buyer_listing_id) %></span>
+          in exchange for <span class="request"><%= Listing.find(bid.seller_listing_id).name %></span>
 
-    <% end %>
+          <% if @user.id == Listing.find(bid.seller_listing_id).account_id %>
 
-  </p>
+            <%= form_tag '/accept_offer', method: 'post', action: "accept_offer" do %>
+              <input type="hidden" name="seller_listing_id" value="<%= bid.seller_listing_id%>" >
+              <input type="hidden" name="buyer_listing_id" value="<%= bid.buyer_listing_id %>" >
+              <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit" %>
+              <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit", class: "btn btn-standard" %>
+            <% end %>
 
-<% end %>
+          <% end %>
+
+        </p>
+
+      <% end %>
+    </div>
+  </div>
+</div>
