@@ -9,7 +9,7 @@ class AccountsController < ApplicationController
   end
 
   def create
-    @account = Account.new(account_params(:username, :email, :password, :avatar))
+    @account = Account.new(account_params(:username, :email, :password, :password_confirmation, :avatar))
     if @account.save
       session[:account_id] = @account.id
       redirect_to @account
@@ -28,7 +28,7 @@ class AccountsController < ApplicationController
   end
 
 	def update
-		if @account.update(account_params(:username, :email, :password, :avatar))
+		if @account.update(account_params(:username, :email, :password, :password_confirmation, :avatar))
 			redirect_to account_path(@account)
 		else
 			render :edit

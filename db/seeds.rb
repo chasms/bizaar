@@ -10,52 +10,52 @@
 
 Account.create([
   {
-    username: "CoolUser1",
+    username: "cooluser1",
     email: "cooluser1@coolness.com",
     password: "password"
   },
   {
-    username: "SweetDude2",
+    username: "sweetdude2",
     email: "sweetdude2@dudeness.com",
     password: "password"
   },
   {
-    username: "Lefty",
+    username: "lefty",
     email: "lefty@fail.ca",
     password: "failure"
   },
   {
-    username: "Space Lord Emperor",
+    username: "spacelordemperor",
     email: "altaleb@space.com",
     password: "mondospiffy"
   },
   {
-    username: "Jordan",
+    username: "jordan",
     email: "jordan@bass.com",
     password: "secretguitarist"
   },
   {
-    username: "Talor",
+    username: "talor",
     email: "talor@guitar.com",
     password: "secretbassist"
   },
   {
-    username: "Jeff",
+    username: "jeff",
     email: "jeffrey@hechlertime.com",
     password: "sotakeoffallyourclothes"
   },
   {
-    username: "Russell",
+    username: "russell",
     email: "blacksmith@state.ma.us",
     password: "blacksmith"
   },
   {
-    username: "Leah",
+    username: "leah",
     email: "leah@hailswebzine.com",
     password: "iamnorwegian"
   },
   {
-    username: "Barack Obama",
+    username: "barackobama",
     email: "barryhusseinsoetoro@kenya.ke",
     password: "allahuakbar"
   },
