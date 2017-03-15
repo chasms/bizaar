@@ -23,7 +23,11 @@ end
 
 def update
   @bid=set_bid
-  @bid.update(buyer_listing_id:params[:listing_id])
+  byebug
+  new_buyer=@bid.seller_id
+  new_buyer_listing=@bid.seller_listing_id
+  new_seller=@bid.buyer_id
+  @bid.update(seller_listing_id:params[:listing_id], seller_id: new_seller, buyer_id: new_buyer, buyer_listing_id: new_buyer_listing)
   redirect_to account_listing_path(@bid.seller_id, @bid.seller_listing_id)
   # should show a message confirming that a request was sent out to update bid
   # should send a notification to buyer that request was updated
