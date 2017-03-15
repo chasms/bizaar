@@ -1,0 +1,10 @@
+
+Welcome to Bizaar, <%= @account.username %>!
+===============================================
+
+You have successfully signed up to Bizaar,
+your username is: <%= @account.username %>.
+
+To confirm your registration, please click on the link here: <%= confirm_email_account_url(@account.confirm_token) %>.
+
+Thanks for joining and have a great day!
