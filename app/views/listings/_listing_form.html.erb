@@ -1,24 +1,30 @@
 <%= render partial: 'errors', locals: {listing: @listing} %>
 
-<div class="container">
-  <%= form_for [@account, @listing] do |f| %>
-  	<div class="field_with_errors">
-  		<%= f.label :name %>
-  		<%= f.text_field :name, class: "form-control" %>
-  	</div>
+<div class="container" style="margin-top:100px;">
+  <div class="col-md-offset-3 col-md-6 form-container" style="">
+    <div class="form-title">Create a New Listing</div>
 
-  	<div class="field_with_errors">
-  		<%= f.label :description %>
-  		<%= f.text_area :description, class: "form-control" %>
-  	</div>
+    <%= form_for [@account, @listing] do |f| %>
 
-    <div class="field_with_errors">
-  		<%= f.label :photo %>
-  		<%= f.file_field :photo, class: "form-control" %>
-  	</div>
+    	<div class="field_with_errors">
+    		<%= f.label :name %>
+    		<%= f.text_field :name, class: "form-control" %>
+    	</div>
 
-  	<%= f.hidden_field :account_id, :value => @user.id %>
-  	<%= f.submit "Create Listing", class: "btn btn-primary" %>
-  <% end %>
+    	<div class="field_with_errors">
+    		<%= f.label :description %>
+    		<%= f.text_area :description, class: "form-control" %>
+    	</div>
 
+      <div class="field_with_errors">
+    		<%= f.label :photo %>
+    		<%= f.file_field :photo, class: "form-control" %>
+    	</div>
+
+    	<%= f.hidden_field :account_id, :value => @user.id %>
+    	<%= f.submit "Create Listing", class: "btn btn-standard btn-standard-long", style: "width:100%;margin-top:20px;" %>
+
+    <% end %>
+
+  </div>
 </div>

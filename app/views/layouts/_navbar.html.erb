@@ -25,7 +25,8 @@
 
           </ul>
         </li>
-        <li style="padding-top:8px;"><span><%= link_to "Add Listing", new_account_listing_path(@user), class: "btn btn-danger" %></span></li>
+        <li style="padding-top:8px;"><span><%= link_to "Add Listing", new_account_listing_path(session[:account_id]), class: "btn btn-standard" %></span>
+        </li>
       </ul>
       <% end %>
 

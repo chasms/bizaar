@@ -1,12 +1,32 @@
-<div class="feed">
+<div class="row">
+  <div class="container">
+    <h2>All Listings</h2>
 
-  <% @listings.each do |l| %>
-      <div class="listing">
-    		<h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
-    		<p><%= link_to l.account.username, account_path(l.account_id) %></p>
-    		<p><%= l.description %></p>
-        <p><%= image_tag l.photo.url(:thumb) %></p>
-      </div>
-  <% end %>
-  
+    <% @listings.each do |listing| %>
+			<div class="col-md-4">
+				<div class="listing-post">
+					<div class="content">
+
+            <span class="title">
+							<%= link_to listing.name, account_listing_path(listing.account_id, listing.id) %>
+						</span>
+
+            <div class="text">
+							<%= listing.description %>
+						</div>
+
+            <div class="text">
+							<%= link_to listing.account.username, account_path(listing.account_id) %>
+						</div>
+
+            <%= link_to "View Listing", account_listing_path(listing.account_id, listing.id), class: "btn", style: "background-color:black;color:white;" %>
+
+          </div>
+
+          <p>-----------------</p>
+
+        </div>
+			</div>
+    <% end %>
+  </div>
 </div>

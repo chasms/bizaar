@@ -1,16 +1,22 @@
 <%= render 'errors' %>
 
-<%= form_for @account, url: login_path, method: :post do |f| %>
-  <div class="field_with_errors">
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field_with_errors">
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Log In" %>
-  </div>
+<div class="container" style="margin-top:100px;">
+  <div class="col-md-offset-3 col-md-6 form-container" style="">
+    <div class="form-title">Log In</div>
+    <%= form_for @account, url: login_path, method: :post do |f| %>
+      <div class="field_with_errors">
+        <%= f.label :username %>
+        <%= f.text_field :username, class: "form-control" %>
+      </div>
+      <div class="field_with_errors">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Log In", class: "btn btn-standard btn-standard-long", style: "width:100%;margin-top:20px;" %>
+      </div>
 
-<% end %>
+      <p style="text-align:center;padding-top:20px;">New to Bizaar? <%= link_to 'Sign Up!', new_account_path %></p>
+    <% end %>
+  </div>
+</div>
