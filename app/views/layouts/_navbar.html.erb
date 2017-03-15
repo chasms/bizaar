@@ -21,7 +21,7 @@
 
           </ul>
         </li>
-          <li style="padding-top:8px;"><span><%= link_to "Add Listing", '#', class: "btn btn-danger" %></span></li>
+          <li style="padding-top:8px;"><span><%= link_to "Add Listing", new_account_listing_path(Account.find(session[:account_id])), class: "btn btn-danger" %></span></li>
       </ul>
     </div>
 </nav>

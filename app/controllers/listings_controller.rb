@@ -25,7 +25,7 @@ class ListingsController < ApplicationController
 	end
 
 	def index
-		@listings= Listing.search(params[:search])
+		@listings = Listing.search(params[:search])
 	end
 
 	def edit

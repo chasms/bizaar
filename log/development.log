@@ -132,3 +132,311 @@ DEPRECATION WARNING: Directly inheriting from ActiveRecord::Migration is depreca
   [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3635140120778133240)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (6.9ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "cooluser1@coolness.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "CoolUser1"], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "CoolUser1"], ["password_digest", "$2a$10$O/ZJ4ZGrx2JJFux.SIBofuVm.0mrze.AVO8L/RKeKouMdIfT/7//y"], ["email", "cooluser1@coolness.com"], ["created_at", 2017-03-14 18:01:05 UTC], ["updated_at", 2017-03-14 18:01:05 UTC]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "sweetdude2@dudeness.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "SweetDude2"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "SweetDude2"], ["password_digest", "$2a$10$1wgC.vwkTuRFDb8IWWKXQehPjCdsiOU7zm89MfAlD0UUyFHhwlQ46"], ["email", "sweetdude2@dudeness.com"], ["created_at", 2017-03-14 18:01:05 UTC], ["updated_at", 2017-03-14 18:01:05 UTC]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "lefty@fail.ca"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Lefty"], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Lefty"], ["password_digest", "$2a$10$M5/eKJ1MCYil3ctfnuchauCsIYgN9fXlU4Fer0UuFcYxTfmpFxAiS"], ["email", "lefty@fail.ca"], ["created_at", 2017-03-14 18:01:05 UTC], ["updated_at", 2017-03-14 18:01:05 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "altaleb@space.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Space Lord Emperor"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Space Lord Emperor"], ["password_digest", "$2a$10$zaeVqvvgw3XeURbXnkIdeeWAEz1IK.KkjqcnRVsB8jIO07GULfqp6"], ["email", "altaleb@space.com"], ["created_at", 2017-03-14 18:01:05 UTC], ["updated_at", 2017-03-14 18:01:05 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "jordan@bass.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Jordan"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Jordan"], ["password_digest", "$2a$10$/CL/qd2D6qZ0k4QNPPlGL.7F85ADnCwAlPiwSUw4PjnUNlSM.DR0W"], ["email", "jordan@bass.com"], ["created_at", 2017-03-14 18:01:05 UTC], ["updated_at", 2017-03-14 18:01:05 UTC]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "talor@guitar.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Talor"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Talor"], ["password_digest", "$2a$10$Ii70rsvGjx3J.rjA9t9ieuULwiDZCOyZlKeRgbpNcPPFTeGPwf9Re"], ["email", "talor@guitar.com"], ["created_at", 2017-03-14 18:01:05 UTC], ["updated_at", 2017-03-14 18:01:05 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "jeffrey@hechlertime.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Jeff"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Jeff"], ["password_digest", "$2a$10$mmsf8u1oSu/sslpucKpSve04n77gITkUGaHct1az.nzSjSgjAgboS"], ["email", "jeffrey@hechlertime.com"], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "russell@blacksmith.state.ma.us"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Russell"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Russell"], ["password_digest", "$2a$10$mSwXtHtZL5a1slUtUxaOVOaqmuY6MscmEoKitHmu7oy7MlXQLpgYK"], ["email", "russell@blacksmith.state.ma.us"], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "leah@hailswebzine.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Leah"], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Leah"], ["password_digest", "$2a$10$f9xt32dc7YEABo7fo/E/fump.Tv2KMdWYByTZ97Bz1OslNhk8Ual2"], ["email", "leah@hailswebzine.com"], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "barryhusseinsoetoro@kenya.ke"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "Barack Obama"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "Barack Obama"], ["password_digest", "$2a$10$IEuat/kvWM5qrbTwNO7Ni.GKe4ObFq.usZZLC6HufML2ZXWNdVPEu"], ["email", "barryhusseinsoetoro@kenya.ke"], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (4.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.7ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "left sock"], ["description", "smells a bit funky"], ["account_id", 1], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "right sock"], ["description", "smells a bit country"], ["account_id", 1], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "middle sock"], ["description", "smells a bit rock and roll"], ["account_id", 1], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "bruh"], ["description", "yeah bruh"], ["account_id", 2], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Fail"], ["description", "War is not diplomacy."], ["account_id", 3], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Lars"], ["description", "Please god take him before he kills again."], ["account_id", 3], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Shoehorn"], ["description", "War IS diplomacy (you know I am right.)"], ["account_id", 4], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Utilikilt"], ["description", "For utilities and weddings."], ["account_id", 4], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Bass"], ["description", "Someday I will have a guitar."], ["account_id", 5], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Rival Ranch"], ["description", "Talor suxxx"], ["account_id", 5], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Guitar"], ["description", "Someday I will have a bass."], ["account_id", 6], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Leonberger"], ["description", "OMG SO CUDDLY"], ["account_id", 6], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Peter Hechler"], ["description", "We're a juggalo-themed web app. Of course you can trade siblings here."], ["account_id", 7], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Half-eaten French Toast"], ["description", "They worked really hard on this."], ["account_id", 7], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Platinum Funk"], ["description", "Taste it. Feel it."], ["account_id", 7], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Happy Meal"], ["description", "Balled up."], ["account_id", 7], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Steel"], ["description", "I forged this."], ["account_id", 8], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Mead"], ["description", "I also forged this."], ["account_id", 8], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Paneer"], ["description", "A sweet fat kitty."], ["account_id", 8], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Guns"], ["description", "My 2nd Amendment rights."], ["account_id", 9], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Murderer husband"], ["description", "He killed a bunch of people."], ["account_id", 9], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Load (0.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "listings" ("name", "description", "account_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Nothing"], ["description", "All your liberty are belong to me."], ["account_id", 10], ["created_at", 2017-03-14 18:01:06 UTC], ["updated_at", 2017-03-14 18:01:06 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2017-03-14 14:01:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 404 Not Found in 57ms (ActiveRecord: 9.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=12):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (153.2ms)
+Started GET "/" for ::1 at 2017-03-14 14:01:44 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (3.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 3.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=12):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (14.5ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.7ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.2ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (235.1ms)
+Started GET "/" for ::1 at 2017-03-14 14:07:11 -0400
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-14 14:07:11 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_errors.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (29.6ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+Completed 200 OK in 6824ms (Views: 6803.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-03-14 14:19:28 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (2.2ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 2.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Account with 'id'=12):
+  
+app/controllers/welcome_controller.rb:5:in `index'
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.5ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/charles/.rvm/gems/ruby-2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (177.0ms)
+Started GET "/" for ::1 at 2017-03-14 14:29:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (25.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 17ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2017-03-14 14:29:52 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/_errors.html.erb (0.4ms)
+  Rendered sessions/new.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 423ms (Views: 366.7ms | ActiveRecord: 32.6ms)
+
+
+Started GET "/accounts/new" for ::1 at 2017-03-14 14:30:45 -0400
+Processing by AccountsController#new as HTML
+  Rendering accounts/new.html.erb within layouts/application
+  Rendered accounts/_errors.html.erb (0.5ms)
+  Rendered accounts/new.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+Completed 200 OK in 122ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/accounts" for ::1 at 2017-03-14 14:33:35 -0400
+Processing by AccountsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4nOMCfD7M7ZXuxlzuliivWpUqKyO1lxj2kRxN/w3Ey8RWGWjgv7jGUchNUjEQGlwUxgEQGWvWmm96CwPCnry+w==", "account"=>{"username"=>"buttmuncherbooty", "email"=>"buttmuncher@booty.com", "password"=>"[FILTERED]"}, "commit"=>"Create Account"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAccount Exists (9.1ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."email" = $1 LIMIT $2[0m  [["email", "buttmuncher@booty.com"], ["LIMIT", 1]]
+  [1m[36mAccount Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "accounts" WHERE "accounts"."username" = $1 LIMIT $2[0m  [["username", "buttmuncherbooty"], ["LIMIT", 1]]
+  [1m[35mSQL (7.9ms)[0m  [1m[32mINSERT INTO "accounts" ("username", "password_digest", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "buttmuncherbooty"], ["password_digest", "$2a$10$BenTATTUO.78ydK1Fh.V5O/q2aUTTbbX6jJg1sR3nlfwLnrPrVcN6"], ["email", "buttmuncher@booty.com"], ["created_at", 2017-03-14 18:33:35 UTC], ["updated_at", 2017-03-14 18:33:35 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/accounts/11
+Completed 302 Found in 127ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/accounts/11" for ::1 at 2017-03-14 14:33:35 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAccount Load (1.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mListing Load (7.3ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."account_id" = $1 ORDER BY "listings"."created_at" DESC[0m  [["account_id", 11]]
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "bids" WHERE (seller_listing_id = 11)[0m
+  Rendered accounts/show.html.erb within layouts/application (16.0ms)
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered layouts/_search_bar.html.erb (2.0ms)
+  Rendered layouts/_navbar.html.erb (12.4ms)
+Completed 200 OK in 170ms (Views: 97.6ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/accounts/11" for ::1 at 2017-03-14 22:26:07 -0400
+Processing by AccountsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mAccount Load (1.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering accounts/show.html.erb within layouts/application
+  [1m[36mListing Load (3.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" WHERE "listings"."account_id" = $1 ORDER BY "listings"."created_at" DESC[0m  [["account_id", 11]]
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "bids" WHERE (seller_listing_id = 11)[0m
+  Rendered accounts/show.html.erb within layouts/application (11.3ms)
+  [1m[36mAccount Load (0.8ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered layouts/_search_bar.html.erb (5.9ms)
+  Rendered layouts/_navbar.html.erb (206.5ms)
+Completed 200 OK in 374ms (Views: 166.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for ::1 at 2017-03-14 22:26:09 -0400
+Processing by WelcomeController#index as HTML
+  [1m[36mAccount Load (3.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering welcome/index.html.erb within layouts/application
+  [1m[36mListing Load (3.2ms)[0m  [1m[34mSELECT "listings".* FROM "listings" ORDER BY "listings"."created_at" DESC[0m
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.7ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.6ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.4ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAccount Load (0.5ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered welcome/index.html.erb within layouts/application (147.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendered layouts/_search_bar.html.erb (1.2ms)
+  Rendered layouts/_navbar.html.erb (6.4ms)
+Completed 200 OK in 268ms (Views: 231.3ms | ActiveRecord: 24.0ms)
+
+

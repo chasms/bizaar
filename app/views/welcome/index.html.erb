@@ -1,11 +1,4 @@
 <h2>All Listings</h2>
-<div class="feed">
-  <% @listings.each do |l| %>
-  <h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
-  <p><%= link_to l.account.username, account_path(l.account_id) %></p>
-  <p><%= l.description %></p>
-  <p><%= image_tag l.photo.url(:thumb) %></p>
-  <% end %>
-</div>
+<%= render 'accounts/listings_feed' %>
 
 <br>
