@@ -1,15 +1,17 @@
-<div class="feed">
-<%= form_for @bid do |f|%>
-  <% @listings.each do |l| %>
-    <div class="listing">
-    		<h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
-    		<p><%= link_to l.account.username, account_path(l.account_id) %></p>
-    		<p><%= l.description %></p>
-        <%= radio_button_tag(:listing_id, l.id)%>
+<div class="col-md-4">
+  <h4 style="text-align:center">Select what you would like for your...</h4>
+  <%= render partial: "listings/listing", locals: {listing: @bid.seller_listing} %>
+</div>
+
+<div class="col-md-8">
+  <div class="feed" style="height:500px; overflow-y:scroll">
+  <%= form_for @bid do |f|%>
+    <% @listings.each do |l| %>
+      <div class="listing col-md-6 col-md-offset-3">
+        <%= render partial: "listings/listing", locals: {listing: l} %>
       </div>
-
-  <% end %>
-  <%= f.submit "Update Bid"%>
-  <%end%>
-
+    <% end %>
+    <%= f.submit "Update Bid", class:'btn btn-standard', style:'position:absolute; top:250px'%>
+    <%end%>
+  </div>
 </div>

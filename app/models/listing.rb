@@ -10,7 +10,7 @@ class Listing < ApplicationRecord
 
 def self.search (search)
 	if search
-		self.where('description like ? or name like ?', "%#{search}%", "%#{search}%")
+		self.where('lower(description) like ? or lower(name) like ?', "%#{search.downcase}%", "%#{search.downcase}%")
 	else
 		self.all
 	end
