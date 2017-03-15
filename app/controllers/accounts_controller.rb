@@ -21,6 +21,7 @@ class AccountsController < ApplicationController
   def show
     @account = Account.find(params[:id])
     @listings = @account.listings.all.order(created_at: :desc)
+    byebug
     @bids = @account.bids
   end
 

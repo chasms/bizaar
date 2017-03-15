@@ -12,7 +12,8 @@ class Account < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
 
   def buyer_bids
-    Bid.where('? = ?', Listing.find(buyer_listing_id).account_id, self.id)
+    # Bid.where('? = ?', Listing.find(buyer_listing_id).account_id, self.id)
+    Listing.where('account_id = ?', self.id).bids
   end
 
   def seller_bids
