@@ -16,9 +16,27 @@ class BidsController < ApplicationController
       redirect_to account_listing_path(@listing.account_id, @listing.id)
   end
 
+def edit
+  @bid=set_bid
+  @listings=Listing.where('account_id= ?', @bid.buyer_id)
+end
+
+def update
+  @bid=set_bid
+  @bid.update(buyer_listing_id:params[:listing_id])
+  redirect_to account_listing_path(@bid.seller_id, @bid.seller_listing_id)
+  # should show a message confirming that a request was sent out to update bid
+  # should send a notification to buyer that request was updated
+end
+
   private
 
     def bid_params(*args)
 	   params.require(:bid).permit(*args)
     end
+
+    def set_bid
+      Bid.find(params[:id])
+    end
+
 end

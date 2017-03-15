@@ -1,0 +1,16 @@
+<div class="feed">
+  <%byebug%>
+<%= form_for @bid do |f|%>
+  <% @listings.each do |l| %>
+    <div class="listing">
+    		<h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
+    		<p><%= link_to l.account.username, account_path(l.account_id) %></p>
+    		<p><%= l.description %></p>
+        <%= radio_button_tag(:listing_id, l.id)%>
+      </div>
+
+  <% end %>
+  <%= f.submit "Update Bid"%>
+  <%end%>
+
+</div>
