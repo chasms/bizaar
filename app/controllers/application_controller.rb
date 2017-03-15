@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
     if logged_in?
       @user = Account.find(session[:account_id])
     else
+      if session
+        session.destroy
+      end
       redirect_to login_path
     end
   end
