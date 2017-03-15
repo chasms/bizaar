@@ -6,9 +6,11 @@
       <ul class="nav navbar-nav">
         <% if logged_in? %>
           	<li><%= link_to "Logout", logout_path, method: "delete" %></li>
-	      	<li>
-	      		<%= render '/layouts/search_bar' %>
-	      	</li>
+            <% unless current_page?(root_path) %>
+	      	    <li>
+	      		    <%= render '/layouts/search_bar' %>
+	      	    </li>
+            <% end %>
         <% else %>
           <li><%= link_to "Sign Up", new_account_path %></li>
           <li><%= link_to "Login", login_path %></li>           
@@ -16,13 +18,16 @@
       </ul>
 
       <ul class="nav navbar-nav pull-right">
-        <li>
-          <a href-"#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Active Bids<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+        <% if logged_in? %> 
+          <li>
+            <a href-"#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Active Bids<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
 
-          </ul>
-        </li>
-          <li style="padding-top:8px;"><span><%= link_to "Add Listing", '#', class: "btn btn-danger" %></span></li>
+            </ul>
+          </li>
+          <li style="padding-top:8px;"><span><%= link_to "Add Listing", new_account_listing_path(session[:account_id]), class: "btn btn-standard" %></span>
+          </li>
+        <% end %>
       </ul>
     </div>
 </nav>

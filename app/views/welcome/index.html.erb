@@ -1,18 +1,46 @@
-
-<h1>Hello <%= @account.username %>!</h1>
-
-<div class="new_listing"><%= link_to "Create a new listing!", new_account_listing_path(@account.id) %></div>
-
-<br>
-
-<h2>All Listings</h2>
-<div class="feed">
-  <% @listings.each do |l| %>
-  <h3><%= link_to l.name, account_listing_path(l.account_id, l.id) %></h3>
-  <p><%= link_to l.account.username, account_path(l.account_id) %></p>
-  <p><%= l.description %></p>
-  <p>-----------------</p>
-  <% end %>
+<div class="row home-section-1">
+	<div class="col-md-12 ind-head" style="background:url('<%= image_url 'pexels-photo-24469' %>');">
+		<div class="bizaar-top-section">
+		<h1>Bizaar</h1>
+		<h2>What will you trade?</h2>
+		<%= form_tag listings_path, method: 'get', class: "search-nav home-search-form" do %>
+		    <%= text_field_tag :search, params[:search], placeholder: "Utilikilt, Used Jorts, etc.", class: 'home-search-field' %>
+		    <%= submit_tag "search", :name=> nil, class: "btn btn-lrg-standard home-srch-btn" %>
+		<% end %>
+		</div>
+	</div>
 </div>
-
+<div class="row home-welcome-box">
+	<div class="user-hello">
+		<div class="user-welcome">Hello <%= @account.username %>!</div>
+		<div class="new_listing">
+			<%= link_to "Create a new listing!", new_account_listing_path(@account.id), class: "btn btn-lrg-standard" %>
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="container">
+		<h2>All Listings</h2>
+		  	<% @listings.each do |l| %>
+				<div class="col-md-4">
+					<div class="listing-post">
+						<div class="content">
+							<span class="title">
+								<%= link_to l.name, account_listing_path(l.account_id, l.id) %>	
+							</span>
+							<div class="text">
+								<%= l.description %>	
+							</div>
+							<div class="text">
+								<%= link_to l.account.username, account_path(l.account_id) %>
+							</div>
+							 <%= link_to "View Listing", account_listing_path(l.account_id, l.id), class: "btn", style: "background-color:black;color:white;" %>				
+						</div>
+						<p>-----------------</p>
+					</div>
+				</div>
+		 	<% end %>
+	</div>
+</div>
 <br>
