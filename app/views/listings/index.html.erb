@@ -1,14 +1,16 @@
 <%if @listings.empty? %>
 
-  <div class="no_results_found">
+  <div class="no_results_found" style="padding:20%; text-align:center;font-size:22px;">
     Sorry, we couldn't find any results for your search
   </div>
 
 <%else%>
 
   <%@listings.each do |listing|%>
-    <div class="listing">
-      <%=link_to listing.name, account_listing_path(listing.account_id, listing.id)%>
+    <div class="col-md-4">
+    	<div>
+    		<%= render partial: "listing", locals:{listing: listing} %>
+    	</div>
     </div>
   <%end%>
 

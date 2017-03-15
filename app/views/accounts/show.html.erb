@@ -32,16 +32,7 @@
           <p>You haven't bid on anything yet!</p>
         <%else%>
           <h4>You have bid on the following items:</h4>   
-          <table class= "table ">
-            <th> Listing</th>
-            <th> Offer</th>
-            <% @account.buyer_bids.each do |bid| %>
-              <tr>
-                <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_listing) %></td>
-                <td><%= bid.buyer_listing.name %></td>
-              </tr>
-            <%end%>
-          </table>
+          <%= render partial: 'bids_table', locals: {account: @account } %>
         <%end%>
       </div>
       <hr>
@@ -55,8 +46,8 @@
             <th> Offer</th>
             <% @account.seller_bids.each do |bid| %>
               <tr>
-                <td><%= bid.buyer_listing.name %></td>
-                <td><%= link_to bid.seller_listing.name, account_listing_path(@account, bid.seller_listing) %></td>
+                <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_account, bid.seller_listing) %></td>
+                <td><%= link_to bid.buyer_listing.name, account_listing_path(bid.buyer_account, bid.buyer_listing) %></td>
               </tr>
             <%end%>
           </table>
