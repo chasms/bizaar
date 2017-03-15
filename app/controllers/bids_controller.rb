@@ -1,4 +1,7 @@
 class BidsController < ApplicationController
+  before_action :login
+  before_action :set_bid, only: [:edit, :update]
+
 
   def new
     @user = Account.find(session[:account_id])
@@ -18,17 +21,14 @@ class BidsController < ApplicationController
 
 def edit
   @bid=set_bid
-  @listings=Listing.where('account_id= ?', @bid.buyer_id)
+  @listings= Listing.find(@bid.buyer_listing_id).account.listings
 end
 
 def update
   @bid=set_bid
-  byebug
-  new_buyer=@bid.seller_id
-  new_buyer_listing=@bid.seller_listing_id
-  new_seller=@bid.buyer_id
-  @bid.update(seller_listing_id:params[:listing_id], seller_id: new_seller, buyer_id: new_buyer, buyer_listing_id: new_buyer_listing)
-  redirect_to account_listing_path(@bid.seller_id, @bid.seller_listing_id)
+  @bid.update(seller_listing_id:params[:listing_id], buyer_listing_id: @bid.seller_listing_id)
+  listing=Listing.find(@bid.seller_listing_id)
+  redirect_to account_listing_path(listing.account, listing)
   # should show a message confirming that a request was sent out to update bid
   # should send a notification to buyer that request was updated
 end
@@ -41,6 +41,6 @@ end
 
     def set_bid
       Bid.find(params[:id])
-    end
+      end
 
 end

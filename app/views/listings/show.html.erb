@@ -1,33 +1,35 @@
 <p>Name: <%= @listing.name %></p>
 <p>Description: <%= @listing.description %></p>
 <p>Seller: <%= @listing.account.username %></p>
+<p><%= image_tag @listing.photo.url(:medium) %></p>
+<p>Session ID: <%= session[:account_id] %>
 
-<% if @account == @user %>
+<% if @account == @user %></p>
 
-<%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-primary" %>
-<%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
-
+  <%= link_to "Edit Listing", edit_account_listing_path, class: "btn btn-warning" %>
+  <%= link_to "Delete Listing", account_listing_path(@account, @listing), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
 
 <% else %>
 
-  <%= form_for @bid do |f| %>
-    <select name="bid[buyer_listing_id]">
-      <% @user.listings.each do |listing| %>
-        <option value="<%= listing.id %>"><%= listing.name %></option>
-      <%end%>
-    </select>
-	  <%= f.hidden_field :seller_listing_id, :value => @listing.id %>
-  	<%= f.submit "Bid", id: "bid-submit" %>
-  <% end %>
+  <%= render partial: "make_bid", locals: {user: @user, bid: @bid, listing: @listing} %>
 
 <% end %>
 
 <% @bids.each do |bid| %>
-<p><%= Listing.find(bid.buyer_listing_id).account.username%>  offers   <span class="offer"> <%=Listing.find(bid.buyer_listing_id).name %></span>
-  in exchange for <span class="request"><%= Listing.find(bid.seller_listing_id).name %></span>
-  <% if session[:account_id] == Listing.find(bid.seller_listing_id).account_id %>
-    <a href="#">Accept Bid</a>
-    <%= link_to "Edit Bid", edit_bid_path(bid), id: "edit"%>
-  <% end %>
-</p>
+    <p><%= Listing.find(bid.buyer_listing_id).account.username%>offers<span class="offer"> <%=Listing.find(bid.buyer_listing_id).name %></span>
+    in exchange for <span class="request"><%= Listing.find(bid.seller_listing_id).name %></span>
+
+    <% if @user.id == Listing.find(bid.seller_listing_id).account_id %>
+
+      <%= form_tag '/accept_offer', method: 'post', action: "accept_offer" do %>
+        <input type="hidden" name="seller_listing_id" value="<%= bid.seller_listing_id%>" >
+        <input type="hidden" name="buyer_listing_id" value="<%= bid.buyer_listing_id %>" >
+        <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit" %>
+        <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit"%>
+      <% end %>
+
+    <% end %>
+
+  </p>
+
 <% end %>

@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# ALL ACCOUNTS
+
 Account.create([
   {
     username: "CoolUser1",
@@ -43,7 +46,7 @@ Account.create([
   },
   {
     username: "Russell",
-    email: "russell@blacksmith.state.ma.us",
+    email: "blacksmith@state.ma.us",
     password: "blacksmith"
   },
   {
@@ -57,6 +60,8 @@ Account.create([
     password: "allahuakbar"
   },
 ])
+
+# ALL LISTINGS
 
 Listing.create([
   {

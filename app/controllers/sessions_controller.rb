@@ -1,7 +1,8 @@
 class SessionsController < ApplicationController
+
   def new
     @account = Account.new
-    redirect_to '/' unless logged_out?
+    redirect_to '/' if logged_in?
   end
 
   def create
@@ -19,9 +20,4 @@ class SessionsController < ApplicationController
     redirect_to login_path
   end
 
-private
-
-  def logged_out?
-    session[:account_id] == nil
-  end
 end

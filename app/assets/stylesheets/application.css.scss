@@ -15,6 +15,37 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
+body{
+  background-color:#F9F9F9 !important;
+}
+input:focus, textarea:focus{
+	border-color:#EB1478 !important;
+}
+.navbar{
+	background-color:rgba(0,0,0,0) !important;
+}
+
+.ind-head{
+background-size: 1400px 700px;
+background-repeat:no-repeat;
+}
+
+.ind-head h1, .ind-head h2{
+	color:white;
+}
+
+.ind-head h1{
+font-family:pacifico;
+font-size:68px;
+}
+
+.bizaar-top-section{
+  text-align:center;
+  margin-top:200px;
+  margin-bottom:150px;
+}
 
 .search-nav{
 	position:relative;
@@ -26,4 +57,181 @@
 #error_explanation {
 	color: red;
 	font-style: oblique;
+}
+
+.top-section{
+
+}
+
+.btn-standard{
+	background-color:#EB1478;
+	border-color: #EB1478;
+	color:white;
+	font-weight:600;
+}
+
+.btn-standard-srch{
+	border:none;
+	color: #EB1478;
+	background-color:rgba(0,0,0,0);
+	font-weight:600;
+	transition:ease-in-out 0.3s;
+}
+
+.btn-standard-srch:hover{
+	background-color:#EB1478;
+	border-color: #EB1478;
+	color:white;
+	font-weight:600;
+}
+
+.btn-lrg-standard {
+	background-color:#EB1478;
+    font: 700 16px/16px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fff;
+    border: 1px solid #EB1478;
+    padding: 15px 35px;
+    margin: 0;
+    display: inline-block;
+    border-radius: 3px;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+    -webkit-transition: color .2s,background-color .2s,box-shadow .2s,border .2s;
+    transition: color .2s,background-color .2s,box-shadow .2s,border .2s;
+}
+
+.btn-standard-long{
+  background-color:#EB1478;
+	border-color: #EB1478;
+	color:white;
+	font-weight:600;
+	margin-top:20px;
+	height:45px;
+	width:100%;
+}
+.home-search-form input[type='text'] {
+    min-width: 220px;
+    box-sizing: border-box;
+    border-radius: 0 3px 3px 0;
+    border:none;
+    font-size: inherit;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    height:50px;
+}
+.home-search-form input[type='text']:focus{
+	border-color:#EB1478;
+}
+
+btn-theme{
+
+}
+
+.home-search-form input[type='submit'] {
+    min-width: 140px;
+    box-sizing: border-box;
+    border-radius: 0 3px 3px 0;
+    font-size: inherit;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    color:white;
+}
+.home-search-field{
+  margin-bottom:-1px;
+  height:47px;
+  line-height:47px;
+  margin-right:0;
+  padding-right:0;
+  border-top-right-radius:0 !important;
+  border-bottom-right-radius:0 !important;
+  border-top-left-radius:3px !important;
+  border-bottom-left-radius:3px !important;
+}
+.user-hello{
+text-align:center;
+padding:10%;
+padding-top:20%;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
+}
+
+.user-welcome{
+margin-top:100px;
+padding-top:150px;
+padding-bottom:5%;
+font-family:pacifico;
+font-size:30px;
+line-height:42px;
+color:black;
+text-align:center;
+}
+
+.post-listing{
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.title {
+    margin-bottom: 3px;
+
+    font-size: 22px;
+    font-weight:300;
+    letter-spacing: .2px;
+    line-height: 30px;
+    color: black;
+}
+.listing-post {
+	padding:10px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.04);
+    margin: 0 0 20px;
+}
+
+.home-section-1{
+	margin-top:-200px;
+	height:500px;
+}
+
+.home-srch-btn{
+	margin-left:-4px !important;
+}
+
+.home-welcome-box{
+	background-color:white;
+}
+input::-webkit-input-placeholder{
+	padding-left:5px;
+}
+
+.form-container{
+padding:20px;
+padding-top:100px;
+padding-bottom:100px;
+background-color:white;
+border-color:#E7E7E7;
+border-style:solid;
+border-width:1px;
+}
+
+.form-title{
+	font-size:22px;
+	font-weight:700;
+	color:black;
+	text-align:center;
+}
+
+.nav-search-field{
+height:30px;border-radius:2px;border-style:solid;border-width:1px;
 }

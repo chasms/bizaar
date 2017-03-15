@@ -1,7 +1,1 @@
-<%= render 'errors' %>
-
-<%= form_for [@account, @listing] do |f| %>
-	<%= f.text_field :name %>
-	<%= f.text_area :description %>
-	<%= f.submit class: "btn btn-primary" %>
-<% end %>
+<%= render partial: "listing_form", locals: {user: @user, account: @account, listing: @listing} %>

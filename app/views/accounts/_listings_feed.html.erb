@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="container">
+    <h2>All Listings</h2>
+
+    <% @listings.each do |listing| %>
+			<div class="col-md-4">
+				<div class="listing-post">
+					<div class="content">
+
+            <span class="title">
+							<%= link_to listing.name, account_listing_path(listing.account_id, listing.id) %>
+						</span>
+
+            <div class="text">
+							<%= listing.description %>
+						</div>
+
+            <div class="text">
+							<%= link_to listing.account.username, account_path(listing.account_id) %>
+						</div>
+
+            <%= link_to "View Listing", account_listing_path(listing.account_id, listing.id), class: "btn", style: "background-color:black;color:white;" %>
+
+          </div>
+
+          <p>-----------------</p>
+
+        </div>
+			</div>
+    <% end %>
+  </div>
+</div>

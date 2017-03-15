@@ -1,4 +1,8 @@
 class AccountsController < ApplicationController
+  before_action :find_account, except: [:new, :create, :show]
+  before_action :login, except: [:new, :create]
+  before_action :validate_user, only: [:edit, :update, :destroy]
+
   def new
     @account = Account.new
     redirect_to '/' if logged_in?
@@ -15,21 +19,45 @@ class AccountsController < ApplicationController
   end
 
   def show
-    if logged_in?
-      @account = Account.find(params[:id])
-      @listings = @account.listings.all.order(created_at: :desc)
-      @bids =Bid.where('seller_id = ?', @account.id)
-    else
-      redirect_to login_path
-    end
+    @account = Account.find(params[:id])
+    @listings = @account.listings.all.order(created_at: :desc)
+    @bids = @account.bids
   end
+
+  def edit
+  end
+
+	def update
+		if @account.update(account_params(:username, :email, :password, :avatar))
+			redirect_to account_path(@account)
+		else
+			render :edit
+		end
+	end
+
+  def destroy
+    @account.listings.destroy
+    @account.destroy
+    session.destroy
+    redirect_to root_path
+  end
+
 
   private
 
-  def account_params(*args)
-    params.require(:account).permit(*args)
-  end
+    def account_params(*args)
+      params.require(:account).permit(*args)
+    end
 
+    def find_account
+      @account = Account.find(params[:id])
+    end
 
+    def validate_user
+			user = Account.where(id: session[:account_id])[0]
+			unless user == @account
+				redirect_to account_path(@account)
+			end
+    end
 
 end

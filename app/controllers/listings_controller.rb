@@ -1,17 +1,17 @@
 class ListingsController < ApplicationController
 	before_action :find_listing, only: [:show, :edit, :update, :destroy]
-	before_action :find_account, except: [:new, :index, :create]
-	before_action :find_user
-
+	before_action :find_account, except: [:new, :create, :index, :accept]
+	before_action :validate_user, only: [:update, :destroy]
+	before_action :login
 
 	def new
 		@listing = Listing.new
-    	@bid = Bid.new
-    	@account = Account.find(session[:account_id])
+    @bid = Bid.new
+    @account = Account.find(session[:account_id])
 	end
 
 	def create
-		@listing = Listing.new(listing_params(:name,:description,:account_id))
+		@listing = Listing.new(listing_params(:name, :description, :account_id, :photo))
 		if @listing.valid?
 			@listing.save
 			redirect_to account_listing_path(@listing.account_id, @listing.id)
@@ -26,20 +26,14 @@ class ListingsController < ApplicationController
 	end
 
 	def index
-		@listings= Listing.search(params[:search])
+		@listings = Listing.search(params[:search])
 	end
 
 	def edit
-		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
-		end
 	end
 
 	def update
-		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
-		end
-		if @listing.update(listing_params(:name, :description))
+		if @listing.update(listing_params(:name, :description, :photo))
 			redirect_to account_listing_path(@account, @listing)
 		else
 			render :edit
@@ -47,11 +41,23 @@ class ListingsController < ApplicationController
 	end
 
 	def destroy
-		unless @user == @account
-			redirect_to account_listing_path(@account, @listing)
-		end
+
 		@listing.destroy
 		redirect_to root_path
+	end
+
+	def accept
+
+		@seller_listing = Listing.find_by(id: params[:seller_listing_id])
+		@seller = Listing.find(params[:seller_listing_id]).account.id
+
+		@buyer_listing = Listing.find_by(id: params[:buyer_listing_id])
+		@buyer = Listing.find(params[:buyer_listing_id]).account.id
+
+		@buyer_listing.update(account_id: @seller)
+		@seller_listing.update(account_id: @buyer)
+
+		redirect_to account_listing_path(@seller, @seller_listing)
 	end
 
 	private
@@ -68,15 +74,18 @@ class ListingsController < ApplicationController
 		end
 
 		def find_account
-			if logged_in?
+			if @listing
 				@account = Account.find(@listing.account_id)
 			else
-				redirect_to login_path
+				@account = Account.find(params[:account_id])
 			end
 		end
 
-		def find_user
-			@user = Account.find(session[:account_id])
+		def validate_user
+			user = Account.where(id: session[:account_id])[0]
+			unless user == @account
+				redirect_to account_listing_path(@account, @listing)
+			end
 		end
 
 end

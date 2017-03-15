@@ -6,10 +6,11 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <%= render '/layouts/navbar' %>
+    <%= render partial: '/layouts/navbar' , locals: {user: @user} %>
     <%= yield %>
 
     
