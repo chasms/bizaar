@@ -7,7 +7,9 @@
       <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_account, bid.seller_listing) %></td>
       <td><%= link_to bid.buyer_listing.name, account_listing_path(bid.buyer_account, bid.buyer_listing) %></td>
       <td>
-        <% if params[:id] && Account.find(session[:account_id]) == Account.find(params[:id]) %>
+        <% if params[:id] && Account.find(session[:account_id]) == Account.find(Listing.find(params[:id]).account_id) %>
+          <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit", class: "btn btn-standard", style: "padding-top: 0px; padding-bottom:0px; height:25px " %>
+        <% elsif params[:id] && Account.find(session[:account_id]) == Account.find(params[:id]) %>
           <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit", class: "btn btn-standard", style: "padding-top: 0px; padding-bottom:0px; height:25px " %>
         <% end %>
       </td>
