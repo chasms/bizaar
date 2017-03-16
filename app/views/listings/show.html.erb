@@ -29,8 +29,8 @@
             <%= form_tag '/accept_offer', method: 'post', action: "accept_offer" do %>
               <input type="hidden" name="seller_listing_id" value="<%= bid.seller_listing_id%>" >
               <input type="hidden" name="buyer_listing_id" value="<%= bid.buyer_listing_id %>" >
-              <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit" %>
-              <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit", class: "btn btn-standard" %>
+              <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-success", id: "search-submit" %>
+              <%= link_to "Edit Offer", edit_bid_path(bid), id: "edit", class: "btn btn-warning" %>
               <%= link_to "Delete Offer", bid_path(bid), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-danger" %>
             <% end %>
 

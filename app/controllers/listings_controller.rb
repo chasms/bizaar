@@ -41,13 +41,11 @@ class ListingsController < ApplicationController
 	end
 
 	def destroy
-
 		@listing.destroy
 		redirect_to root_path
 	end
 
 	def accept
-
 		@seller_listing = Listing.find_by(id: params[:seller_listing_id])
 		@seller = Listing.find(params[:seller_listing_id]).account.id
 
@@ -57,7 +55,9 @@ class ListingsController < ApplicationController
 		@buyer_listing.update(account_id: @seller)
 		@seller_listing.update(account_id: @buyer)
 
-		redirect_to account_listing_path(@seller, @seller_listing)
+		Bid.find_by(buyer_listing_id: params[:buyer_listing_id], seller_listing_id: params[:seller_listing_id]).destroy
+
+		redirect_to account_listing_path(@buyer, @buyer_listing)
 	end
 
 	private
