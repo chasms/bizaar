@@ -68,7 +68,7 @@ Account.create([
     email: "barryhusseinsoetoro@kenya.ke",
     password: "allahuakbar",
     avatar: File.new("db/seed_images/accounts/BarackObama.jpg")
-  },
+  }
 ])
 
 # ALL LISTINGS
@@ -205,5 +205,5 @@ Listing.create([
     description: "All your liberty are belong to me.",
     account_id: 10,
     photo: File.new("db/seed_images/listings/Nothing.jpg")
-  },
+  }
 ])
