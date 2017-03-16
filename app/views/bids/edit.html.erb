@@ -4,14 +4,15 @@
 </div>
 
 <div class="col-md-8">
-  <div class="feed" style="height:500px; overflow-y:scroll">
+  <div class="feed" style="height:700px; overflow-y:scroll">
   <%= form_for @bid do |f|%>
     <% @listings.each do |l| %>
       <div class="listing col-md-6 col-md-offset-3">
         <%= render partial: "listings/listing", locals: {listing: l} %>
       </div>
     <% end %>
-    <%= f.submit "Update Bid", class:'btn btn-standard', style:'position:absolute; top:250px'%>
+    <%= submit_tag "Accept Offer", :name=> nil, class: "btn btn-primary", id: "search-submit", style:'position:absolute; top:300px; width: 150px; text-align:center' %>
+    <%= f.submit "Update Bid", class:'btn btn-standard', style:'position:absolute; top:250px; width: 150px; text-align:center'%>
     <%end%>
   </div>
 </div>

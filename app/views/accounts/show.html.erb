@@ -1,57 +1,65 @@
-<div class="container">  
- 
+<div class="container">
+
   <div class="col-md-4">
-      <div style="margin:auto;background-size:cover;border-top-left-radius:10px;border-top-right-radius:10px;background-image:url(<%= image_url(@account.avatar.url(:medium)) %>); height:250px;margin-top:0;"></div>
-      <div class="listing-post" style="text-align:center;">
-        <h2><%= @account.username %></h2>
-        <br>
-      </div><br>
-      <% if @account == @user %>
-        <div class="centerbox">
-          <%= link_to "Create Listing", new_account_listing_path(@user), class: "btn btn-secondary usr-btns"  %>
-          <%= link_to "Edit Account", edit_account_path(@user), class: "btn btn-secondary usr-btns" %>
-          <%= link_to "Delete Account", account_path(@user), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-secondary usr-btns" %>
-        </div>
-      <% end %>
+
+    <div style="margin:auto;background-size:cover;border-top-left-radius:10px;border-top-right-radius:10px;background-image:url(<%= image_url(@account.avatar.url(:medium)) %>); height:250px;margin-top:35px;"></div>
+
+    <div class="listing-post" style="text-align:center;">
+      <h2><%= @account.username %></h2>
+    </div>
+
+    <% if @account == @user %>
+      <div class="centerbox">
+        <%= link_to "Create Listing", new_account_listing_path(@user), class: "btn btn-secondary usr-btns"  %>
+        <%= link_to "Edit Account", edit_account_path(@user), class: "btn btn-secondary usr-btns" %>
+        <%= link_to "Delete Account", account_path(@user), method: :delete, data: {confirm: "You sure?"}, class: "btn btn-secondary usr-btns" %>
+      </div>
+    <% end %>
+
   </div>
 
-  <div class="col-md-4" style="padding-top:20px;">
+  <div class="col-md-4">
+    <div class="listing-post" style="margin-top: 35px">
+
+      <div id="outgoing_bids">
+
+        <% if @account.buyer_bids.empty?%>
+
+          <p>You haven't bid on anything yet!</p>
+
+        <%else%>
+
+          <h4>You have bid on the following items:</h4>
+          <%= render partial: 'outgoing_bids_table', locals: {account: @account } %>
+
+        <%end%>
+
+      </div>
+
+      <div  id="incoming_bids">
+
+        <% if @account.seller_bids.empty?%>
+
+          <p>You don't have any bids on your items.</p>
+
+        <%else%>
+
+          <h4>Offers made on your listings:</h4>
+          <%= render partial: 'incoming_bids_table', locals: {account: @account } %>
+
+        <%end%>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-md-4" style="margin-top:35px">
     <h3 style="text-align:center;"><%= @account.username %>'s listings</h3>
-    <div style="overflow-y:scroll; height:400px;padding:10%;">
+    <div style="overflow-y:scroll; height:600px; padding-right:30px; padding-left:30px">
     <%= render 'listings_profile' %>
     </div>
   </div>
-  
-  <br>
-  
-  <div class="col-md-4">
-    <h3 style="text-align:center;"><%= @account.username %>'s bids</h3>
-    <div class="listing-post">
-      <div id="outgoing_bids">
-        <% if @account.buyer_bids.empty?%>
-          <p>You haven't bid on anything yet!</p>
-        <%else%>
-          <h4>You have bid on the following items:</h4>   
-          <%= render partial: 'bids_table', locals: {account: @account } %>
-        <%end%>
-      </div>
-      <hr>
-      <div  id="incoming_bids">
-        <% if @account.seller_bids.empty?%>
-          <p>You don't have any bids on your items.</p>
-        <%else%>
-          <h4>Offers made on your listings:</h4>   
-          <table class= "table ">
-            <th> Listing</th>
-            <th> Offer</th>
-            <% @account.seller_bids.each do |bid| %>
-              <tr>
-                <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_account, bid.seller_listing) %></td>
-                <td><%= link_to bid.buyer_listing.name, account_listing_path(bid.buyer_account, bid.buyer_listing) %></td>
-              </tr>
-            <%end%>
-          </table>
-        <%end%>
-      </div>
-  </div>
+
 </div>

@@ -1,0 +1,10 @@
+<table class= "table ">
+  <th>Listing</th>
+  <th>Offer</th>
+  <% account.buyer_bids.each do |bid| %>
+    <tr>
+      <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_account, bid.seller_listing) %></td>
+      <td><%= link_to bid.buyer_listing.name, account_listing_path(bid.buyer_account, bid.buyer_listing) %></td>
+    </tr>
+  <%end%>
+</table>

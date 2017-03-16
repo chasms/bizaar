@@ -1,10 +1,12 @@
 <table class= "table ">
-  <th> Listing</th>
-  <th> Offer</th>
-  <% account.buyer_bids.each do |bid| %>
+  <th>Listing</th>
+  <th>Offer</th>
+  <th></th>
+  <% account.seller_bids.each do |bid| %>
     <tr>
       <td><%= link_to bid.seller_listing.name, account_listing_path(bid.seller_account, bid.seller_listing) %></td>
       <td><%= link_to bid.buyer_listing.name, account_listing_path(bid.buyer_account, bid.buyer_listing) %></td>
+      <td><%= link_to "Edit Offer", edit_bid_path(bid), id: "edit", class: "btn btn-standard", style: "padding-top: 0px; padding-bottom:0px; height:25px " %></td>
     </tr>
   <%end%>
 </table>
