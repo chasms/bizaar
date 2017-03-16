@@ -25,11 +25,20 @@
 
         <% if @account.buyer_bids.empty?%>
 
-          <p><%= @account.username %> hasn't bid on anything yet!</p>
+          <% if @account == @user %>
+            <p>You haven't bid on anything yet!</p>
+          <% else %>
+            <p><%= @account.username %> hasn't bid on anything yet!</p>
+          <% end %>
 
         <%else%>
 
-          <h4><%= @account.username %> has bid on the following items:</h4>
+          <% if @account == @user %>
+            <h4>You have bid on the following items:</h4>
+          <% else %>
+            <h4><%= @account.username %> has bid on the following items:</h4>
+          <% end %>
+
           <%= render partial: 'outgoing_bids_table', locals: {account: @account } %>
 
         <%end%>
@@ -40,11 +49,21 @@
 
         <% if @account.seller_bids.empty?%>
 
-          <p><%= @account.username %> doesn't have any bids on your items.</p>
+          <% if @account == @user %>
+            <p>You don't have any bids on your items.</p>
+          <% else %>
+            <p><%= @account.username %> doesn't have any bids on their items.</p>
+          <% end %>
 
         <%else%>
 
-          <h4>Offers made on <%= @account.username %>'s listings:</h4>
+          <% if @account == @user %>
+            <h4>Offers made on your listings:</h4>
+          <% else %>
+            <h4>Offers made on <%= @account.username %>'s listings:</h4>
+          <% end %>
+
+
           <%= render partial: 'incoming_bids_table', locals: {account: @account } %>
 
         <%end%>
