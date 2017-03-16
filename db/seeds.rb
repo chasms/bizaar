@@ -207,3 +207,52 @@ Listing.create([
     photo: File.new("db/seed_images/listings/Nothing.jpg")
   }
 ])
+
+# ALL BIDS
+
+Bid.create([
+  {
+    buyer_listing_id: 5,
+    seller_listing_id: 7,
+  },
+  {
+    buyer_listing_id: 20,
+    seller_listing_id: 22,
+  },
+  {
+    buyer_listing_id: 21,
+    seller_listing_id: 18,
+  },
+  {
+    buyer_listing_id: 14,
+    seller_listing_id: 19,
+  },
+  {
+    buyer_listing_id: 3,
+    seller_listing_id: 4,
+  },
+  {
+    buyer_listing_id: 2,
+    seller_listing_id: 22,
+  },
+  {
+    buyer_listing_id: 1,
+    seller_listing_id: 22,
+  },
+  {
+    buyer_listing_id: 1,
+    seller_listing_id: 5,
+  },
+  {
+    buyer_listing_id: 2,
+    seller_listing_id: 8,
+  },
+  {
+    buyer_listing_id: 2,
+    seller_listing_id: 12,
+  },
+  {
+    buyer_listing_id: 9,
+    seller_listing_id: 8,
+  }
+  ])
