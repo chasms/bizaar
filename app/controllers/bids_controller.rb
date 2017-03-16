@@ -18,7 +18,11 @@ class BidsController < ApplicationController
   end
 
   def edit
-    @listings = Listing.find(@bid.buyer_listing_id).account.listings
+    if Account.find(session[:account_id]) == Account.find(params[:id])
+      @listings = Listing.find(@bid.buyer_listing_id).account.listings
+    else
+      redirect_to root_path
+    end
   end
 
   def update
