@@ -18,7 +18,6 @@ class BidsController < ApplicationController
   end
 
   def edit
-    byebug
     @listings = Listing.find(@bid.buyer_listing_id).account.listings
   end
 
@@ -30,12 +29,11 @@ class BidsController < ApplicationController
     # should send a notification to buyer that request was updated
   end
 
-  # def destroy
-  #   byebug
-  #   listing = Listing.find(@bid.buyer_listing_id)
-  #   @bid.destroy
-  #   redirect_to account_listing_path(listing.account, listing)
-  # end
+  def destroy
+    listing = Listing.find(@bid.seller_listing_id)
+    @bid.destroy
+    redirect_to account_listing_path(listing.account, listing)
+  end
 
   private
 
