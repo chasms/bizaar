@@ -6,7 +6,7 @@
 				<%= link_to listing.name, account_listing_path(listing.account_id, listing.id) %>
 				<% if @bid && listing.account_id != @user.id %>
 					<div class="col-md-1" style="float:left">
-						<%= radio_button_tag(:listing_id, listing.id)%>
+						<%= radio_button_tag(:listing_id, listing.id, (@bid.buyer_listing_id == listing.id)) %>
 					</div>
 				<% end %>
 			</span>
