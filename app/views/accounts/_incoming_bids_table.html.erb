@@ -14,5 +14,3 @@
     </tr>
   <%end%>
 </table>
-
-(params[:account_id] && Account.find(session[:account_id]) == Account.find(params[:account_id])) || (params[:id] && Account.find(session[:account_id]) == Account.find(Listing.find(params[:id]).account_id)) || (params[:id] && Account.find(session[:account_id]) == Account.find(params[:id]))
