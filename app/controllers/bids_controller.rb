@@ -1,6 +1,6 @@
 class BidsController < ApplicationController
   before_action :login
-  before_action :set_bid, only: [:edit, :update]
+  before_action :set_bid, only: [:edit, :update, :destroy]
 
 
   def new
@@ -29,6 +29,13 @@ class BidsController < ApplicationController
     # should show a message confirming that a request was sent out to update bid
     # should send a notification to buyer that request was updated
   end
+
+  # def destroy
+  #   byebug
+  #   listing = Listing.find(@bid.buyer_listing_id)
+  #   @bid.destroy
+  #   redirect_to account_listing_path(listing.account, listing)
+  # end
 
   private
 
