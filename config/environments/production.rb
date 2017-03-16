@@ -1,8 +1,9 @@
 Rails.application.configure do
   config.paperclip_defaults = {
   :storage => :s3,
+  :s3_region => ENV['AWS_REGION'],
   :s3_credentials => {
-    :bucket => 'bizaar-assets', 
+    :bucket => 'bizaar-assets',
     :access_key_id => ENV['AWS_ACCESS_KEY'],
     :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
   }
