@@ -2,6 +2,7 @@ class Listing < ApplicationRecord
 	belongs_to :account
 	has_many :buyer_bids, class_name: "Bid", foreign_key: "buyer_listing_id"
 	has_many :seller_bids, class_name: "Bid", foreign_key: "seller_listing_id"
+
 	validates :name, presence: true
 	validates :description, presence: true
 
