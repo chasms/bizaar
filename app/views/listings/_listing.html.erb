@@ -1,9 +1,10 @@
 <div style="padding:10%;">
 	<div class="listing-post-test" style = "border-radius:10px;overflow:hidden;">
 		<div style="overflow:hidden;"><%= image_tag listing.photo.url(:medium), class: "prof-list-img", style:"height:300px; object-fit: cover !important;" %></div>
-		<div class="content text-content centerbox">
-			<span class="title">
-				<%= link_to listing.name, account_listing_path(listing.account_id, listing.id) %>
+		<div class="content text-content centerbox" >
+			<span class="title" style="font-size:1em !important;" >
+				<% testthing = truncate(listing.name, :length=>20)%>
+				<%= link_to testthing, account_listing_path(listing.account_id, listing.id) %>
 				<% if @bid && listing.account_id != @user.id %>
 					<div class="col-md-1" style="float:left">
 						<%= radio_button_tag(:listing_id, listing.id, (@bid.buyer_listing_id == listing.id)) %>

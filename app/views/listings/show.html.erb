@@ -19,12 +19,13 @@
 
       <% end %>
       <p style="margin-top:20px;font-size:22px;color:black;font-weight:700;text-align:center;">Bids on this item:</p>
+
       <% @bids.each do |bid| %>
           <hr>
-          <p style="text-align:center;padding:5px;"><%= link_to Listing.find(bid.buyer_listing_id).account.username, account_path(Listing.find(bid.buyer_listing_id).account.id) %> offers<span class="offer"> <%=link_to Listing.find(bid.buyer_listing_id).name, account_listing_path(Listing.find(bid.buyer_listing_id).account_id, bid.buyer_listing_id) %></span>
-          in exchange for <span class="request"><%= Listing.find(bid.seller_listing_id).name %></span>
+          <p style="text-align:center;padding:5px;"><%= link_to bid.buyer_account.username, account_path(bid.buyer_account.id) %> offers<span class="offer"> <%=link_to bid.buyer_listing.name, account_listing_path(bid.buyer_account.id, bid.buyer_listing_id) %></span>
+          in exchange for <span class="request"><%= bid.seller_listing.name %></span>
 
-          <% if @user.id == Listing.find(bid.seller_listing_id).account_id %>
+          <% if @user.id == bid.seller_account.id %>
 
             <%= form_tag '/accept_offer', method: 'post', action: "accept_offer" do %>
               <input type="hidden" name="seller_listing_id" value="<%= bid.seller_listing_id%>" >
